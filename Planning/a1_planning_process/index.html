@@ -14,7 +14,7 @@
     
     
       
-        <title>Scripts - Spatial Computing Project Template</title>
+        <title>Process - Spatial Computing Project Template</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts" class="md-skip">
+        <a href="#planning-process" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts
+              Process
             
           </span>
         </div>
@@ -193,12 +193,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -219,11 +221,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Planning/a1_planning_process/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Process
       </a>
+      
     </li>
   
 
@@ -235,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Planning/a1_planning_product/" class="md-nav__link">
+      <a href="../a1_planning_product/" class="md-nav__link">
         Product
       </a>
     </li>
@@ -315,14 +327,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -343,21 +353,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../index/scripts/" class="md-nav__link">
         Scripts
       </a>
-      
     </li>
   
 
@@ -369,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../figures/" class="md-nav__link">
+      <a href="../../index/figures/" class="md-nav__link">
         Figures
       </a>
     </li>
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../presentations/" class="md-nav__link">
+      <a href="../../index/presentations/" class="md-nav__link">
         Presentations
       </a>
     </li>
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bibliography/" class="md-nav__link">
+      <a href="../../index/bibliography/" class="md-nav__link">
         Bibliography
       </a>
     </li>
@@ -519,17 +519,7 @@
               
                 
                 
-                <h1 id="scripts">Scripts</h1>
-<blockquote>
-<p>Here you should include all of your scripts whether they are text, python notebook or procedural scripts. You should also include link to the link to relevant location in the main pages, description, explanatory materials such as pseudo code or flowcharts, and visualizations if it is applicable. If necessary this page can be broken down to multiple pages. Here is an example of how to include your scripts:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">cell_neigh</span> <span class="ow">in</span> <span class="n">cell_neighbors</span><span class="p">:</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">cell_neigh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">neigh</span> <span class="ow">in</span> <span class="n">cell_neigh</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-        <span class="k">if</span> <span class="n">neigh</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">neigh</span> <span class="o">&gt;</span> <span class="n">cell</span><span class="p">:</span>
-            <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">cell</span><span class="p">,</span> <span class="n">neigh</span><span class="p">))</span>
-</code></pre></div>
+                <h1 id="planning-process">Planning: process</h1>
                 
               
               
@@ -549,7 +539,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About" rel="prev">
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -558,20 +548,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About
+              Home
             </div>
           </div>
         </a>
       
       
         
-        <a href="../figures/" class="md-footer__link md-footer__link--next" aria-label="Next: Figures" rel="next">
+        <a href="../a1_planning_product/" class="md-footer__link md-footer__link--next" aria-label="Next: Product" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Figures
+              Product
             </div>
           </div>
           <div class="md-footer__button md-icon">
