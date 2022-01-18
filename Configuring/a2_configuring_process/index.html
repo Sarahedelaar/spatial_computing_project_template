@@ -564,21 +564,33 @@
 <table><thead><tr class="header"><th>Title</th><th>Configuring (process): Circulation Manifold (product)</th></tr></thead><tbody><tr class="odd"><td>Objective</td><td>Formulate a spatial (topological) concept, design a modular circulation manifold on a pixel/voxel grid.</td></tr><tr class="even"><td>Procedure</td><td><p>Construct a voxelated model of the site with a maximum height of 100 meters. Orient the voxel grid to a global coordinate system (e.g. geographical North-East-West-South). Size the voxels carefully based on the modular height of steps and the length of stair flights and ramps so that they fit in X/Y directions into multiple pixels. Choose the Z size of voxels according to step risers and choose the same size for X and Y as a whole multiple of step threads.</p><p>There are three types of spaces in terms of pedestrian movement in buildings, metaphorically speaking, spaces to <strong>walk</strong> through (e.g. corridors, ramps, and stairs), spaces to <strong>stand</strong> on (e.g. platforms connecting doors to corridors and stairs) and spaces to <strong>sit</strong> on (functional rooms/spaces). Construct a simplified mesh model of all bridges (corridors, ramps, stairs) connected by standing platforms in a modular grid of voxels/pixels. Take into account the free-height necessary for all spaces and pack them into the bounding volume of the building. For every functional space, leave a single pixel as a standing platform and colour it with the corresponding colour.</p></td></tr></tbody></table>
 
 <h1 id="moet-allemaal-naar-planning-proces-voxelized-envelope-high-en-low-voxel-size">MOET ALLEMAAL NAAR PLANNING PROCES // VOXELIZED ENVELOPE high en low + VOXEL SIZE</h1>
-<h2 id="program-of-requirements"><strong>Program of Requirements</strong></h2>
+<h3 id="voxelized-envelope-low-res"><strong>Voxelized envelope low res</strong></h3>
 <blockquote>
-<p>In the table below the requirements for every type of space is defined. The amount of housing is set from the start. The table shows the type of space, size in m², size per unit (for housing) and the amount of voxels. </p>
+<p>The voxelized envelope consists of.................... (Fig. 1)</p>
 </blockquote>
-<iframe src="https://docs.google.com/spreadsheets/d/1fP4WQXN2Z44PQ2nYK3VLIeuipYBI8pUkOmPT6aOl8e4/edit?usp=sharing" style="width:100%;height:500px;"></iframe>
-
-<h2 id="rel-chart"><strong>REL Chart</strong></h2>
+<figure>
+<p><img align="left" alt="Envelope" src="../../img/lowres_lattice.png" />
+  </p>
+<figcaption>Fig. 1 Voxelized envelope lowres</figcaption>
+</figure>
+<h3 id="voxelized-envelope-high-res"><strong>Voxelized envelope high res</strong></h3>
 <blockquote>
-<p>With a set program of requirements, we specified each space’s realtive closeness preferences and certain prefered spatial qualities.</p>
+<p>The voxelized envelope consists of.................... (Fig. 2)</p>
 </blockquote>
-<h2 id="relations-between-spaces"><strong>Relations between spaces</strong></h2>
+<figure>
+<p><img align="left" alt="Envelope" src="../../img/highres_lattice.png" />
+  </p>
+<figcaption>Fig. 2 Voxelized envelope highres</figcaption>
+</figure>
+<h3 id="voxel-size"><strong>Voxel size</strong></h3>
 <blockquote>
-<p>Relations between spaces, ranging from 0-1.</p>
+<p>The final voxel is 3.6*3.6*3.24 (w*d*h) meters. With the minivoxel being 0.9*0.9*0.54 (w*d*h) meters to represent a flight of three stairs. (Fig. 3)</p>
 </blockquote>
-<iframe src="https://docs.google.com/spreadsheets/d/1sOsGPwzE13D8FmNZD64akcNyAFRVVJvhgMh-XqF3d34/edit#gid=0" style="width:100%;height:500px;"></iframe>
+<figure>
+<p><img align="left" alt="Voxelsize" src="../../img/voxelsize.jpg" />
+  </p>
+<figcaption>Fig. 3 Voxelsize</figcaption>
+</figure>
                 
               
               
