@@ -558,39 +558,12 @@
                 
                 
                 <h1 id="configuring-product"><strong>Configuring: product</strong></h1>
-<h1 id="moet-allemaal-naar-planning-proces-high-res-field">MOET ALLEMAAL NAAR PLANNING PROCES // HIGH RES FIELD</h1>
-<h2 id="distance-to"><strong>Distance to </strong></h2>
+<h1 id="high-res-field">HIGH RES FIELD</h1>
+<h2 id="distance-to-main-entrance"><strong>Distance to main entrance </strong></h2>
 <blockquote>
 <p>For creating a distance field based on walking through the building, we first created two different neigbourhood stencils to work with. The first stencil shows that going one voxel sideways (in x- or y-direction) the value of the neighbours will increment with 1. However, when someone wants to go a level up or down, this costs more energy than walking on the same level. Therefore, the neighbours in the z-direction will increment with the value of 2.</p>
 </blockquote>
 <p><img alt="Stencil" src="../../img/stencil1.JPG" title="Stencil" /></p>
-<h3 id="distance-to-the-ground"><strong>Distance to the ground</strong></h3>
-<blockquote>
-<p>PSEUDO CODE AANPASSEN</p>
-</blockquote>
-<figure>
-<p><img align="left" alt="Distance to Ground" src="../../img/ground_acc_highres.png" />
-  </p>
-<figcaption>Distance to Ground</figcaption>
-</figure>
-<figure>
-<p><img align="left" alt="Flowchart Distance to Ground" src="../../img/flow_diagram_dist_ground.jpg" />
-  </p>
-<figcaption>Flowchart Distance to Ground</figcaption>
-</figure>
-<p><strong> Pseudo code </strong></p>
-<p><strong> 0. Distance to ground field  </strong>
-<div class="highlight"><span class="filename">Distance_to_ground_field.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">svf</span> <span class="n">points</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mf">1.</span> <span class="n">Import</span> <span class="n">Meshes</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mf">2.</span> <span class="n">Import</span> <span class="n">Lattice</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mf">3.</span> <span class="n">Initialize</span> <span class="n">vertical</span> <span class="n">adjacency</span> <span class="n">matrix</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">Calculate</span> <span class="n">distances</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="mf">4.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">field</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Distance</span> <span class="n">to</span> <span class="n">ground</span> <span class="n">field</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">)</span>
-</code></pre></div></p>
-<h3 id="distance-to-the-main-entrance"><strong>Distance to the main entrance</strong></h3>
 <blockquote>
 <p>PSEUDO CODE NAKIJKEN</p>
 </blockquote>
@@ -606,25 +579,61 @@
 </figure>
 <p><strong> Pseudo code </strong></p>
 <p><strong> 0. Distance to main entrance field  </strong>
-<div class="highlight"><span class="filename">Distance_to_main_entrance_field.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">points</span> <span class="n">of</span> <span class="n">main</span> <span class="n">street</span> <span class="ow">and</span> <span class="n">public</span> <span class="n">transport</span>
+<div class="highlight"><span class="filename">Distance_to_main_entrance_field.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">points</span> <span class="n">of</span> <span class="n">main</span> <span class="n">street</span> <span class="ow">and</span> <span class="n">public</span> <span class="n">transport</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mf">1.</span> <span class="n">Import</span> <span class="n">Meshes</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mf">2.</span> <span class="n">Import</span> <span class="n">Lattice</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mf">3.</span> <span class="n">Compute</span> <span class="kn">from</span> <span class="nn">each</span> <span class="n">voxel</span> <span class="n">the</span> <span class="n">average</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">the</span> <span class="n">main</span> <span class="n">street</span> <span class="ow">and</span> <span class="n">public</span> <span class="n">transport</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">Choose</span> <span class="n">the</span> <span class="n">voxel</span> <span class="k">with</span> <span class="n">the</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="k">as</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">Retrieve</span> <span class="n">the</span> <span class="n">neighbour</span> <span class="n">voxels</span> <span class="n">of</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">Set</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">horizontal</span> <span class="n">neighbours</span> <span class="n">to</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">vertical</span> <span class="n">neighbours</span> <span class="n">to</span> <span class="mi">2</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">For</span> <span class="n">each</span> <span class="n">neighbour</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="n">Find</span> <span class="n">the</span> <span class="n">neighbours</span> <span class="ow">and</span> <span class="n">add</span> <span class="mi">1</span> <span class="p">(</span><span class="n">horizontal</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">2</span> <span class="p">(</span><span class="n">vertical</span><span class="p">)</span> <span class="n">to</span> <span class="n">it</span><span class="err">’</span><span class="n">s</span> <span class="n">value</span><span class="p">,</span> <span class="n">when</span> <span class="n">it</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">value</span> <span class="n">yet</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">Convert</span> <span class="n">the</span> <span class="n">values</span> <span class="n">into</span> <span class="n">values</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="mf">4.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">field</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Distance</span> <span class="n">to</span> <span class="n">main</span> <span class="n">entrance</span> <span class="n">field</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="distance-to-the-ground"><strong>Distance to the ground</strong></h3>
+<blockquote>
+<p>PSEUDO CODE AANPASSEN</p>
+</blockquote>
+<figure>
+<p><img alt="Distance to Ground" src="../../img/Ground.png" />
+  </p>
+<figcaption>Distance to Ground</figcaption>
+</figure>
+<figure>
+<p><img align="left" alt="Distance to Ground" src="../../img/ground_acc_highres.png" />
+  </p>
+<figcaption>Distance to Ground</figcaption>
+</figure>
+<figure>
+<p><img align="left" alt="Flowchart Distance to Ground" src="../../img/flow_diagram_dist_ground.jpg" />
+  </p>
+<figcaption>Flowchart Distance to Ground</figcaption>
+</figure>
+<p><strong> Pseudo code </strong></p>
+<p><strong> 0. Distance to ground field  </strong>
+<div class="highlight"><span class="filename">Distance_to_ground_field.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">svf</span> <span class="n">points</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="mf">1.</span> <span class="n">Import</span> <span class="n">Meshes</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="mf">2.</span> <span class="n">Import</span> <span class="n">Lattice</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="mf">3.</span> <span class="n">Compute</span> <span class="kn">from</span> <span class="nn">each</span> <span class="n">voxel</span> <span class="n">the</span> <span class="n">average</span> <span class="n">distance</span> <span class="n">to</span> <span class="n">the</span> <span class="n">main</span> <span class="n">street</span> <span class="ow">and</span> <span class="n">public</span> <span class="n">transport</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">Choose</span> <span class="n">the</span> <span class="n">voxel</span> <span class="k">with</span> <span class="n">the</span> <span class="n">minimum</span> <span class="n">distance</span> <span class="k">as</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">Retrieve</span> <span class="n">the</span> <span class="n">neighbour</span> <span class="n">voxels</span> <span class="n">of</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">Set</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">horizontal</span> <span class="n">neighbours</span> <span class="n">to</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">vertical</span> <span class="n">neighbours</span> <span class="n">to</span> <span class="mi">2</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">For</span> <span class="n">each</span> <span class="n">neighbour</span><span class="p">:</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="n">Find</span> <span class="n">the</span> <span class="n">neighbours</span> <span class="ow">and</span> <span class="n">add</span> <span class="mi">1</span> <span class="p">(</span><span class="n">horizontal</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">2</span> <span class="p">(</span><span class="n">vertical</span><span class="p">)</span> <span class="n">to</span> <span class="n">it</span><span class="err">’</span><span class="n">s</span> <span class="n">value</span><span class="p">,</span> <span class="n">when</span> <span class="n">it</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">value</span> <span class="n">yet</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">Convert</span> <span class="n">the</span> <span class="n">values</span> <span class="n">into</span> <span class="n">values</span> <span class="n">between</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="mf">4.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">field</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Distance</span> <span class="n">to</span> <span class="n">main</span> <span class="n">entrance</span> <span class="n">field</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="mf">3.</span> <span class="n">Initialize</span> <span class="n">vertical</span> <span class="n">adjacency</span> <span class="n">matrix</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">Calculate</span> <span class="n">distances</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="mf">4.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">field</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Distance</span> <span class="n">to</span> <span class="n">ground</span> <span class="n">field</span> <span class="p">(</span><span class="n">low</span> <span class="ow">and</span> <span class="n">high</span> <span class="n">res</span><span class="p">)</span>
 </code></pre></div></p>
 <h3 id="noise"><strong>Noise</strong></h3>
 <blockquote>
 <p>FLOWCHART UPDATEN</p>
 </blockquote>
+<figure>
+<p><img alt="Noise" src="../../img/Noise.png" />
+  </p>
+<figcaption>Noise</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="Noise" src="../../img/noise_highres.png" />
   </p>
@@ -655,6 +664,11 @@
 <blockquote>
 <p>Sun Accessibility</p>
 </blockquote>
+<figure>
+<p><img alt="Sun accessibility" src="../../img/Sun%20acc.png" />
+  </p>
+<figcaption>Sun accessibility</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="Shadow Casting" src="../../img/sun_acc_highres.png" />
   </p>
@@ -690,6 +704,11 @@
 <p>PSEUDO, FLOWCHART EN HIGHRES UPDATEN</p>
 </blockquote>
 <figure>
+<p><img alt="Shadow cast" src="../../img/Shadow%20cast.png" />
+  </p>
+<figcaption>Shadow casting</figcaption>
+</figure>
+<figure>
 <p><img align="left" alt="Shadow Casting" src="../../img/shadow_conf.png" />
   </p>
 <figcaption>Shadow Casting</figcaption>
@@ -724,6 +743,11 @@
 <p>PSEUDO AFMAKEN</p>
 </blockquote>
 <figure>
+<p><img alt="SVF" src="../../img/Sky.png" />
+  </p>
+<figcaption>Sky view factor</figcaption>
+</figure>
+<figure>
 <p><img align="left" alt="Sky View Factor" src="../../img/sky_view_highres.png" />
   </p>
 <figcaption>View on Greenery</figcaption>
@@ -755,6 +779,11 @@
 <blockquote>
 <p>TEST....</p>
 </blockquote>
+<figure>
+<p><img alt="Greenery" src="../../img/greenery.png" />
+  </p>
+<figcaption>View on greenery</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="View on Greenery" src="../../img/viewongreenery.jpg" />
   </p>
@@ -840,6 +869,19 @@
         </a>
       </div>
       
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/SarahEdelaar/spatial_computing_project_template" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
