@@ -419,10 +419,168 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../Final_Deliveries/scripts/" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
       Scripts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        <span class="md-nav__icon md-icon"></span>
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/distance_entrance/" class="md-nav__link">
+      Distance
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/dynamic_fields/" class="md-nav__link">
+      Dynamic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/distance_floor/" class="md-nav__link">
+      Floor distance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/green_view/" class="md-nav__link">
+      Green
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/noise/" class="md-nav__link">
+      Noise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/shadow/" class="md-nav__link">
+      Shadow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/svf/" class="md-nav__link">
+      SVF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/sun_acc/" class="md-nav__link">
+      Sun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/functions/" class="md-nav__link">
+      Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/grow_agents/" class="md-nav__link">
+      Initialization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/shafts_corridors/" class="md-nav__link">
+      Shafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Scripts/voxelization/" class="md-nav__link">
+      Voxelization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -559,7 +717,7 @@
                 
                 <h1 id="massing-process"><strong>Massing: process</strong></h1>
 <hr />
-<h1 id="initialization-abm-sim-imgs-glenn-schaften-en-corridors-volgorde-controleren">INITIALIZATION + ABM SIM + IMGS Glenn + schaften en corridors // Volgorde controleren</h1>
+<h1 id="flowcharts-van-product-zoom-schem-tek">Flowcharts van product + zoom, schem. tek.</h1>
 <h2 id="seed-allocationinitialization"><strong>Seed allocation/initialization</strong></h2>
 <blockquote>
 <p>Explanation of allocation/initialization</p>
@@ -731,12 +889,12 @@
 <figcaption>Centers of clusters</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Clust_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Cluster_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">???????????</span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">massing</span> <span class="n">lattice</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Find</span> <span class="n">the</span> <span class="n">different</span> <span class="n">clusters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">grown</span> <span class="n">ABM</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">voxel</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">cluster</span>
@@ -755,7 +913,7 @@
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">??????????</span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">Create</span> <span class="mi">4</span> <span class="n">clusters</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">chosen</span> <span class="n">cluster</span> <span class="n">centres</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">row</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">clusters</span>
@@ -776,7 +934,7 @@
 <span class="normal"><a href="#__codelineno-7-5">5</a></span>
 <span class="normal"><a href="#__codelineno-7-6">6</a></span>
 <span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">??????????</span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">shafts</span><span class="p">,</span> <span class="n">main</span> <span class="n">entrance</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">For</span> <span class="n">every</span> <span class="n">cluster</span> <span class="n">center</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">shaft</span>
@@ -785,7 +943,8 @@
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">corridors</span>
 </code></pre></div>
-</td></tr></table></p>
+</td></tr></table>
+</br></p>
 <blockquote>
 <p>An example of the growth of the fields, shown below is the student house.</p>
 </blockquote>
