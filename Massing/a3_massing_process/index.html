@@ -679,8 +679,31 @@
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
 </code></pre></div>
 </td></tr></table></p>
+<figure>
+<p><img align="left" alt="Depth" src="../../img/building_depth.png" />
+  </p>
+<figcaption>Building depth</figcaption>
+</figure>
+<p><strong> Pseudo code</strong>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Building_depth.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="nb">max</span><span class="o">.</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Create</span> <span class="n">stencils</span> <span class="n">to</span> <span class="n">check</span> <span class="n">the</span> <span class="n">different</span> <span class="n">directions</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Create</span> <span class="n">conditions</span> <span class="k">for</span> <span class="n">each</span> <span class="n">direction</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">In</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">In</span> <span class="n">the</span> <span class="n">y</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
+</code></pre></div>
+</td></tr></table></p>
 <blockquote>
-<p>Before choosing a finall mass there were four options as we had 2 functions to choose out off. Below are the results of both functions off, float function off, both functions on and finally the final mass that has only the float function on.</p>
+<p>Before choosing a final mass there were four options as we had 2 functions to choose out off. Below are the results of both functions off, float function off, both functions on and finally the final mass that has only the float function on.</p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_off.png" />
@@ -707,37 +730,70 @@
   </p>
 <figcaption>Centers of clusters</figcaption>
 </figure>
-<figure>
-<p><img align="left" alt="Paths" src="../../img/paths_background.png" />
-  </p>
-<figcaption>Paths</figcaption>
-</figure>
+<p><strong> Pseudo code</strong>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Clust_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">???????????</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Find</span> <span class="n">the</span> <span class="n">different</span> <span class="n">clusters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">grown</span> <span class="n">ABM</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">voxel</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">cluster</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
+</code></pre></div>
+</td></tr></table></p>
 <figure>
 <p><img align="left" alt="Shafts" src="../../img/shafts_background.png" />
   </p>
 <figcaption>Shafts</figcaption>
 </figure>
+<p><strong> Pseudo code</strong>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Shaft_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">??????????</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">Create</span> <span class="mi">4</span> <span class="n">clusters</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">chosen</span> <span class="n">cluster</span> <span class="n">centres</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">row</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">clusters</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">shafts</span>
+</code></pre></div>
+</td></tr></table></p>
+<figure>
+<p><img align="left" alt="Paths" src="../../img/paths_background.png" />
+  </p>
+<figcaption>Paths</figcaption>
+</figure>
+<p><strong> Pseudo code</strong>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Corridor_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Input</span><span class="p">:</span> <span class="err">??????????</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">For</span> <span class="n">every</span> <span class="n">cluster</span> <span class="n">center</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">shaft</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">For</span> <span class="n">every</span> <span class="n">shaft</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">corridors</span>
+</code></pre></div>
+</td></tr></table></p>
+<blockquote>
+<p>An example of the growth of the fields, shown below is the student house.</p>
+</blockquote>
 <figure>
 <p><img align="left" alt="Growth" src="../../img/student_house_growth.gif" />
   </p>
 <figcaption>Student house growth</figcaption>
 </figure>
-<p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">initialization.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">os</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</code></pre></div>
-</td></tr></table></p>
-<p><strong> 1. Import  </strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">bla bla.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">hello</span> <span class="n">world</span>
-</code></pre></div>
-</td></tr></table></p>
                 
               
               
