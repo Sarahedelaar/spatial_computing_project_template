@@ -912,12 +912,18 @@
 <figcaption>Fig. 3 Voxelsize</figcaption>
 </figure>
 <h3 id="main-entrance">Main entrance</h3>
-<p><img src="/img/Entrance.png" align="right"/>
+<blockquote>
+<p>In this analysis our objective was to calculate the distance from every voxel to the main entrance. The main entrance was initialized by us prior to the analysis.
+<img src="/img/Entrance.png" align="right"/>
 <img src="/img/Voxels.png" align="left"/></p>
+</blockquote>
 <p><br clear="left"/></p>
 <iframe src="https://drive.google.com/file/d/1PVmR0BFf2cq39tiwaLSTBNVs9zbdrE2Z/preview" width="900px" height="300px"></iframe>
 
 <h3 id="distance-to-ground">Distance to ground</h3>
+<blockquote>
+<p>This analysis works in a similar way as the previous one. This time every voxel calculates the distance between itself and the ground floor.</p>
+</blockquote>
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Ground.png" />
   </p>
@@ -926,6 +932,9 @@
 <iframe src="https://drive.google.com/file/d/1gn6IroC8c-d6_po1XDo_2UbU96fRxZtC/preview" width="900px" height="300px"></iframe>
 
 <h3 id="noise">Noise</h3>
+<blockquote>
+<p>Noise is estimated by looking at the busiest roads surrounding the building site. Noise pollution gets reduced once you get further away from the sound source. So this analysis is also calculated by means of the distance between a certain point and a voxel.</p>
+</blockquote>
 <figure>
 <p><img alt="Noise" src="../../img/Noise.png" />
   </p>
@@ -934,6 +943,9 @@
 <iframe src="https://drive.google.com/file/d/1NRZ9Z5tXbs4ADDTYxr4RI11CbMjtcA_D/preview" width="900px" height="300px"></iframe>
 
 <h3 id="sun-access">Sun access</h3>
+<blockquote>
+<p>For this analysis we had to take the annual path of the sun. From the points of this path the sun shoots rays of light that hit the voxels. The more hits, the higher the sun accessibility.</p>
+</blockquote>
 <figure>
 <p><img alt="Sun accessibility" src="../../img/Sun%20acc.png" />
   </p>
@@ -942,6 +954,9 @@
 <iframe src="https://drive.google.com/file/d/1e9Nnasi6UWlAjaMEyjvSYO0lpBppy42j/preview" width="900px" height="300px"></iframe>
 
 <h3 id="shadow-casting">Shadow casting</h3>
+<blockquote>
+<p>Shadow casting extends the previous analysis, by inverting the hits with the sun. The inverted hits are the shadows that cast a shadow over surrounded buildings.</p>
+</blockquote>
 <figure>
 <p><img alt="Shadow cast" src="../../img/Shadow%20cast.png" />
   </p>
@@ -950,6 +965,9 @@
 <iframe src="https://drive.google.com/file/d/1WVEsNCrHBYL3iiHQKMFTeT-8O9Aa02hy/preview" width="900px" height="300px"></iframe>
 
 <h3 id="sky-view-factor">Sky view factor</h3>
+<blockquote>
+<p>In the sky view analysis we calculated the amount of a sky a voxel can see without being blocked by surrounded structures.</p>
+</blockquote>
 <figure>
 <p><img alt="SVF" src="../../img/Sky.png" />
   </p>
@@ -958,6 +976,9 @@
 <iframe src="https://drive.google.com/file/d/1IY74tjCA-i6ky7r4eXDwXXKygF8T0DDt/preview" width="900px" height="300px"></iframe>
 
 <h3 id="view-on-greenery">View on greenery</h3>
+<blockquote>
+<p>This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam. These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery.</p>
+</blockquote>
 <figure>
 <p><img alt="Greenery" src="../../img/greenery.png" />
   </p>
