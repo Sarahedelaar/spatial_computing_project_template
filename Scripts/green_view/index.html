@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#view-on-greenery" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -468,10 +473,69 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Green
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Green
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initalization" class="md-nav__link">
+    Initalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-greenery" class="md-nav__link">
+    Visualize greenery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-rays-from-green-points-to-envelope" class="md-nav__link">
+    Compute rays from green points to envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolate-lowres-lattices-to-highres" class="md-nav__link">
+    Interpolate lowres lattices to highres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -687,15 +751,577 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initalization" class="md-nav__link">
+    Initalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-greenery" class="md-nav__link">
+    Visualize greenery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-rays-from-green-points-to-envelope" class="md-nav__link">
+    Compute rays from green points to envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolate-lowres-lattices-to-highres" class="md-nav__link">
+    Interpolate lowres lattices to highres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Green</h1>
-                
-                
+                <h1 id="view-on-greenery">View on greenery</h1>
+<h3 id="initalization">Initalization</h3>
+<p>Importing the packages
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">import</span> <span class="nn">pickle</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">from</span> <span class="nn">ladybug.sunpath</span> <span class="kn">import</span> <span class="n">Sunpath</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">RegularGridInterpolator</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="kn">import</span> <span class="nn">resources.functions</span> <span class="k">as</span> <span class="nn">f</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># convert trimesh to pv_mesh</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="k">return</span> <span class="n">pv_mesh</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Importing meshes
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">envelope_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/new_envelope.obj&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">context_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/immediate_context.obj&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># load the mesh from file</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">envelope_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">envelope_path</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">context_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">context_path</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="c1"># Check if the mesh is watertight</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">envelope_mesh</span><span class="o">.</span><span class="n">is_watertight</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Importing envelope lattice
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># loading the lattice from csv</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/envelope_lowres.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># creating the full lattice</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">full_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+</td></tr></table>
+Importing greenery mesh and points
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">green_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/green_agniesbuurt_rotatedpopgeo_nostumps.obj&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">green_points_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/green_points.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># load the mesh from file</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">green_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">green_path</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">green_points</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">cloud_from_csv</span><span class="p">(</span><span class="n">green_points_path</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="visualize-greenery">Visualize greenery</h3>
+<p>Visualize green meshes
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1"># initiating the plotter</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># adding the meshes</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">envelope_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#abd8ff&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="c1">#trying the green</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">green_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#8bbe8f&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1"># plotting</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="c1">#p.show(use_ipyvtk=True)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Visualize green points
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># initiating the plotter</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1"># fast visualization of the lattice</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">full_lattice</span><span class="o">.</span><span class="n">fast_vis</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># adding the context mesh</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="c1"># add the green points</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">green_points</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#8bbe8f&quot;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lighting</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="c1">#p.show(use_ipyvtk=True)</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="compute-rays-from-green-points-to-envelope">Compute rays from green points to envelope</h3>
+<p>Preparing the list of ray directions and origins
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># Creating list of directions and rays</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">converted_green_vecs</span> <span class="o">=</span> <span class="n">green_points</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float16&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">green_dirs2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">converted_green_vecs</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">vox_cens</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">centroids</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">ray_dir3</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">ray_src3</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">for</span> <span class="n">v_cen</span> <span class="ow">in</span> <span class="n">vox_cens</span><span class="p">:</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">for</span> <span class="n">gp</span> <span class="ow">in</span> <span class="n">converted_green_vecs</span><span class="p">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>        <span class="n">ray_src3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v_cen</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>        <span class="n">ray_dir3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gp</span> <span class="o">-</span> <span class="n">v_cen</span><span class="p">)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="c1"># converting the list of directions and sources to numpy array</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="n">ray_dir3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray_dir3</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="n">ray_src3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray_src3</span><span class="p">)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1"># checking how many calculations to do</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of voxels to shoot rays from :&quot;</span><span class="p">,</span><span class="n">vox_cens</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of rays per each voxel :&quot;</span><span class="p">,</span><span class="n">green_dirs2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of rays to be shot :&quot;</span><span class="p">,</span><span class="n">ray_src3</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Import the pickle files with calculations
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># the calculation is too big for a normal computer</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1"># the calculation has been done on a better computer and imported as pickle files</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">bs</span> <span class="o">=</span> <span class="mf">1e5</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">d</span> <span class="o">=</span> <span class="s1">&#39;../data/sims&#39;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">ray_id3</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">int_loc3</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ray_src3</span><span class="p">)</span> <span class="o">/</span> <span class="n">bs</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>    <span class="c1"># s = int(i * bs)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="c1"># e = int((i + 1) * bs)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="c1"># e = e if e &lt; len(ray_src3) else len(ray_src3) - 1</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">/green_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>        <span class="n">_</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">l</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        <span class="n">ray_id3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">bs</span><span class="p">))</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>        <span class="n">int_loc3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="n">ray_id3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">ray_id3</span><span class="p">)</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="n">int_loc3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">int_loc3</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Reshape the information
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span>
+<span class="normal"><a href="#__codelineno-8-43">43</a></span>
+<span class="normal"><a href="#__codelineno-8-44">44</a></span>
+<span class="normal"><a href="#__codelineno-8-45">45</a></span>
+<span class="normal"><a href="#__codelineno-8-46">46</a></span>
+<span class="normal"><a href="#__codelineno-8-47">47</a></span>
+<span class="normal"><a href="#__codelineno-8-48">48</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># initializing the hits list full of zeros</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">hits3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">ray_dir3</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">hit_loc3</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">ray_dir3</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ray_id3</span><span class="p">):</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="n">hits3</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> 
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="n">hit_loc3</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">int_loc3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">gp_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">green_dirs2</span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">vox_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vox_cens</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="c1"># initiating the list of ratio</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">vox_grn_vis</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="c1"># iterate over the voxels</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="k">for</span> <span class="n">v_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">vox_count</span><span class="p">):</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>    <span class="c1"># counter for the intersection</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>    <span class="n">int_count</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>    <span class="c1"># iterate over the sun rays</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>    <span class="k">for</span> <span class="n">s_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">gp_count</span><span class="p">):</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>        <span class="c1"># computing the ray id from voxel id and sun id</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>        <span class="n">r_id</span> <span class="o">=</span> <span class="n">s_id</span> <span class="o">+</span> <span class="n">v_id</span> <span class="o">*</span> <span class="n">gp_count</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>        <span class="k">if</span> <span class="n">hits3</span><span class="p">[</span><span class="n">r_id</span><span class="p">]:</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>            <span class="c1"># retrieve the ray origin</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>            <span class="n">ray_orig</span> <span class="o">=</span> <span class="n">ray_src3</span><span class="p">[</span><span class="n">r_id</span><span class="p">]</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>            <span class="c1"># retrieve the intersection point</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>            <span class="n">ray_dest</span> <span class="o">=</span> <span class="n">hit_loc3</span><span class="p">[</span><span class="n">r_id</span><span class="p">]</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a>            <span class="c1"># retrieve the ray vector</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a>            <span class="n">ray_vec</span> <span class="o">=</span> <span class="n">ray_dir3</span><span class="p">[</span><span class="n">r_id</span><span class="p">]</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>            <span class="c1"># the distance from origin to intersection point</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>            <span class="n">int_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">ray_dest</span> <span class="o">-</span> <span class="n">ray_orig</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a>            <span class="c1"># the distance from the origin to the green point</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a>            <span class="n">ray_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ray_vec</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a>            <span class="c1"># if the ray length is greater than the intersection length, it means that the view toward the green point is blocked</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>            <span class="k">if</span> <span class="n">ray_length</span> <span class="o">&gt;</span> <span class="n">int_length</span><span class="p">:</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a>                <span class="c1"># summing the intersections</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a>                <span class="n">int_count</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a>    <span class="c1"># computing the percentage of the rays that DID NOT have </span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a>    <span class="c1"># an intersection (aka could see the skydome)</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a>    <span class="n">grn_vis</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">int_count</span> <span class="o">/</span> <span class="n">gp_count</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a>    <span class="c1"># add the ratio to list</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a>    <span class="n">vox_grn_vis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grn_vis</span><span class="p">)</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="c1"># converting the list of directions and sources to numpy array</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48"></a><span class="n">vox_grn_vis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vox_grn_vis</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Store green view information in a lattice
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># getting the condition of all voxels: are they inside the envelop or not</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">env_all_vox</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1"># all voxels green view</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">all_vox_grn_vis</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1"># v_id: voxel id in the list of only interior voxels</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">v_id</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1"># for all the voxels, place the interiority condition of each voxel in &quot;vox_in&quot;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="k">for</span> <span class="n">vox_in</span> <span class="ow">in</span> <span class="n">env_all_vox</span><span class="p">:</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>    <span class="c1"># if the voxel was outside...</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>    <span class="k">if</span> <span class="n">vox_in</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>        <span class="c1"># read its value of green view and append it to the list of all voxel green view</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="n">all_vox_grn_vis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vox_grn_vis</span><span class="p">[</span><span class="n">v_id</span><span class="p">])</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>        <span class="c1"># add one to the voxel id so the next time we read the next voxel</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>        <span class="n">v_id</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="c1"># if the voxel was not inside... </span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>        <span class="c1"># add 0.0</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>        <span class="n">all_vox_grn_vis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="c1"># convert to array</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="n">grn_vis_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">all_vox_grn_vis</span><span class="p">)</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="c1"># Further info: for vectorized version of this code check: https://github.com/shervinazadi/spatial_computing_workshops/blob/master/notebooks/w2_solar_envelope.ipynb</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="c1"># reshape to lattice shape</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="n">grn_vis_array</span> <span class="o">=</span> <span class="n">grn_vis_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">full_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="c1"># convert to lattice</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="n">grn_vis_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">grn_vis_array</span><span class="p">,</span> <span class="n">full_lattice</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Visualize the view on greenery field
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">f</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">grn_vis_lattice</span><span class="p">,</span> <span class="s2">&quot;Green visibility&quot;</span><span class="p">,</span> <span class="s2">&quot;../data/green_view_lowres&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Save lowres field to csv
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1"># save the SVF latice to csv</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/green_view_lowres.csv&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">grn_vis_lattice</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="interpolate-lowres-lattices-to-highres">Interpolate lowres lattices to highres</h3>
+<p>Import highres lattice
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># loading highres lattice</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">highres_lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/envelope_highres.csv&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">highres_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">highres_lattice_path</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Define interpolation function
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="n">lowres_field</span><span class="p">):</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="c1"># loading highres lattice</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="n">highres_lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/envelope_highres.csv&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="n">highres_lat</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">highres_lattice_path</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="n">highres_lattice</span> <span class="o">=</span> <span class="n">highres_lat</span> <span class="o">*</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="c1"># line spaces</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="n">x_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lowres_field</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="n">y_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lowres_field</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>    <span class="n">z_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">lowres_field</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">lowres_field</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>    <span class="c1"># interpolation function</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>    <span class="n">interpolating_function</span> <span class="o">=</span> <span class="n">RegularGridInterpolator</span><span class="p">((</span><span class="n">x_space</span><span class="p">,</span> <span class="n">y_space</span><span class="p">,</span> <span class="n">z_space</span><span class="p">),</span> <span class="n">lowres_field</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>    <span class="c1"># high_res lattice</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>    <span class="n">full_lattice</span> <span class="o">=</span> <span class="n">highres_lattice</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>    <span class="c1"># sample point</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="n">sample_points</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">centroids</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>    <span class="c1"># interpolation</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a>    <span class="n">interpolated_values</span> <span class="o">=</span> <span class="n">interpolating_function</span><span class="p">(</span><span class="n">sample_points</span><span class="p">)</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a>    <span class="c1"># lattice construction</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a>    <span class="n">interpolated_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">interpolated_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">highres_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">highres_lattice</span><span class="p">)</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a>    <span class="c1"># nulling the unavailable cells</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a>    <span class="n">interpolated_lattice</span> <span class="o">*=</span> <span class="n">highres_lattice</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a>    <span class="k">return</span> <span class="n">interpolated_lattice</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Interpolate greenery lattice
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">highres_grn</span> <span class="o">=</span> <span class="n">interpolate</span><span class="p">(</span><span class="n">grn_vis_lattice</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">highres_grn_lattice</span> <span class="o">=</span> <span class="n">highres_grn</span> <span class="o">*</span> <span class="n">highres_lattice</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Visualize highres green view field
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">f</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">highres_grn</span><span class="p">,</span> <span class="s2">&quot;Green visibility&quot;</span><span class="p">,</span> <span class="s2">&quot;../data/green_view_highres.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Save highres field into a csv
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1"># save the SVF latice to csv</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/green_view.csv&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">highres_grn_lattice</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="credits">Credits</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Shervin Azadi and Pirouz Nourian&quot;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;MIT&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">__url__</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/shervinazadi/spatial_computing_workshops&quot;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="n">__summary__</span> <span class="o">=</span> <span class="s2">&quot;Spatial Computing Design Studio Workshop on Solar Envelope&quot;</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
