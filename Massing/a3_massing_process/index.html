@@ -328,72 +328,85 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#squareness" class="md-nav__link">
+    Squareness
+  </a>
+  
+    <nav class="md-nav" aria-label="Squareness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#seed-allocationinitialization" class="md-nav__link">
     Seed allocation/initialization
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#evaluate-voxel" class="md-nav__link">
     Evaluate voxel
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-value" class="md-nav__link">
     Change value
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#updat-voxel" class="md-nav__link">
     Updat voxel
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#building-depth" class="md-nav__link">
     Building depth
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#final-mass" class="md-nav__link">
     Final mass
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#centers-of-clusters" class="md-nav__link">
     Centers of clusters
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#shafts" class="md-nav__link">
     Shafts
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#paths" class="md-nav__link">
     Paths
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gif-growth-example" class="md-nav__link">
     GIF growth example
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -801,72 +814,85 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#squareness" class="md-nav__link">
+    Squareness
+  </a>
+  
+    <nav class="md-nav" aria-label="Squareness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#seed-allocationinitialization" class="md-nav__link">
     Seed allocation/initialization
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#evaluate-voxel" class="md-nav__link">
     Evaluate voxel
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-value" class="md-nav__link">
     Change value
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#updat-voxel" class="md-nav__link">
     Updat voxel
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#building-depth" class="md-nav__link">
     Building depth
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#final-mass" class="md-nav__link">
     Final mass
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#centers-of-clusters" class="md-nav__link">
     Centers of clusters
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#shafts" class="md-nav__link">
     Shafts
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#paths" class="md-nav__link">
     Paths
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gif-growth-example" class="md-nav__link">
     GIF growth example
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -885,6 +911,19 @@
                 
                 <h1 id="massing-process"><strong>Massing: process</strong></h1>
 <hr />
+<h2 id="squareness">Squareness</h2>
+<p><strong> Pseudo code</strong>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Squareness.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">fields</span><span class="p">,</span> <span class="n">program</span> <span class="n">of</span> <span class="n">requirement</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">SQUARE</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span>
+</code></pre></div>
+</td></tr></table></p>
 <h3 id="seed-allocationinitialization"><strong>Seed allocation/initialization</strong></h3>
 <blockquote>
 <p>Explanation of allocation/initialization</p>
@@ -895,27 +934,27 @@
 <figcaption>Initialization of the agents</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Initialization_agents.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">fields</span><span class="p">,</span> <span class="n">program</span> <span class="n">of</span> <span class="n">requirement</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">Initialize</span> <span class="n">the</span> <span class="n">empty</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="p">(</span><span class="n">full</span> <span class="n">of</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">For</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">ids</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">preferences</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  <span class="n">Create</span> <span class="n">a</span> <span class="n">preference</span> <span class="n">lattice</span> <span class="k">for</span> <span class="n">every</span> <span class="n">agent</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="n">Raise</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">every</span> <span class="n">field</span> <span class="n">by</span> <span class="n">the</span> <span class="n">weight</span> <span class="n">given</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">program</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="n">Select</span> <span class="n">the</span> <span class="n">voxel</span> <span class="k">with</span> <span class="n">the</span> <span class="n">highest</span> <span class="n">value</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="n">Move</span> <span class="n">the</span> <span class="n">voxel</span> <span class="n">to</span> <span class="n">ground</span> <span class="n">level</span><span class="p">,</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">floating</span> <span class="n">parts</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">occupation</span> <span class="ow">and</span> <span class="n">availability</span> <span class="n">lattice</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Initialization_agents.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">fields</span><span class="p">,</span> <span class="n">program</span> <span class="n">of</span> <span class="n">requirement</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Initialize</span> <span class="n">the</span> <span class="n">empty</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="p">(</span><span class="n">full</span> <span class="n">of</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">For</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">ids</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">preferences</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="n">Create</span> <span class="n">a</span> <span class="n">preference</span> <span class="n">lattice</span> <span class="k">for</span> <span class="n">every</span> <span class="n">agent</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="n">Raise</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">every</span> <span class="n">field</span> <span class="n">by</span> <span class="n">the</span> <span class="n">weight</span> <span class="n">given</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">program</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>  <span class="n">Select</span> <span class="n">the</span> <span class="n">voxel</span> <span class="k">with</span> <span class="n">the</span> <span class="n">highest</span> <span class="n">value</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  <span class="n">Move</span> <span class="n">the</span> <span class="n">voxel</span> <span class="n">to</span> <span class="n">ground</span> <span class="n">level</span><span class="p">,</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">floating</span> <span class="n">parts</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">occupation</span> <span class="ow">and</span> <span class="n">availability</span> <span class="n">lattice</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span>
 </code></pre></div>
 </td></tr></table>
 </br></p>
@@ -926,25 +965,25 @@
 <figcaption>Evaluate voxel</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Evaluate_voxels.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">to</span> <span class="n">be</span> <span class="n">evaluated</span> <span class="n">voxels</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">preferences</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Create</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">full</span> <span class="n">of</span> <span class="n">ones</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">length</span> <span class="k">as</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">to</span> <span class="n">be</span> <span class="n">evaluated</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">For</span> <span class="n">each</span> <span class="n">agent</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">raw</span> <span class="n">value</span> <span class="n">of</span> <span class="n">these</span> <span class="n">voxels</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">fields</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="n">Raise</span> <span class="n">these</span> <span class="n">values</span> <span class="k">with</span> <span class="n">the</span> <span class="n">weight</span> <span class="n">of</span> <span class="n">each</span> <span class="n">preference</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>  <span class="n">Multiply</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">new</span> <span class="n">values</span> <span class="k">with</span> <span class="n">each</span> <span class="n">other</span> <span class="n">to</span> <span class="n">get</span> <span class="n">the</span> <span class="n">final</span> <span class="n">value</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">Return</span> <span class="n">the</span> <span class="n">final</span> <span class="n">values</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">values</span> <span class="n">of</span> <span class="n">evaluated</span> <span class="n">voxels</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Evaluate_voxels.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">to</span> <span class="n">be</span> <span class="n">evaluated</span> <span class="n">voxels</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">preferences</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Create</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">full</span> <span class="n">of</span> <span class="n">ones</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">length</span> <span class="k">as</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">to</span> <span class="n">be</span> <span class="n">evaluated</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">For</span> <span class="n">each</span> <span class="n">agent</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">raw</span> <span class="n">value</span> <span class="n">of</span> <span class="n">these</span> <span class="n">voxels</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">fields</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="n">Raise</span> <span class="n">these</span> <span class="n">values</span> <span class="k">with</span> <span class="n">the</span> <span class="n">weight</span> <span class="n">of</span> <span class="n">each</span> <span class="n">preference</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="n">Multiply</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">new</span> <span class="n">values</span> <span class="k">with</span> <span class="n">each</span> <span class="n">other</span> <span class="n">to</span> <span class="n">get</span> <span class="n">the</span> <span class="n">final</span> <span class="n">value</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">Return</span> <span class="n">the</span> <span class="n">final</span> <span class="n">values</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">values</span> <span class="n">of</span> <span class="n">evaluated</span> <span class="n">voxels</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="change-value">Change value</h3>
@@ -957,27 +996,27 @@
 <p>Beneath is the pseudo code for the change values code. When the agent has grown to its max amount of voxels, the value of the neighbours will be compared with the value of its own voxels. When the neighbour has a value which is 10% higher, it will be occupied and the other voxel will be removed.</p>
 </blockquote>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Change_value.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">agent</span> <span class="n">location</span> <span class="nb">list</span><span class="p">,</span> <span class="n">new</span> <span class="nb">id</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">If</span> <span class="n">the</span> <span class="n">voxel</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">get</span> <span class="n">occupied</span> <span class="p">(</span><span class="n">new</span> <span class="nb">id</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">):</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>  <span class="n">Add</span> <span class="n">the</span> <span class="n">location</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">agent</span> <span class="n">locations</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">availability</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">occupied</span> <span class="p">(</span><span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">Else</span> <span class="p">(</span><span class="n">voxel</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">removed</span><span class="p">):</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="n">Remove</span> <span class="n">the</span> <span class="n">location</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">agent</span> <span class="n">locations</span> <span class="nb">list</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">availability</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">unoccupied</span> <span class="p">(</span><span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">the</span> <span class="n">new</span> <span class="nb">id</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">agents</span> <span class="n">location</span> <span class="nb">list</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Change_value.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">agent</span> <span class="n">location</span> <span class="nb">list</span><span class="p">,</span> <span class="n">new</span> <span class="nb">id</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">If</span> <span class="n">the</span> <span class="n">voxel</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">get</span> <span class="n">occupied</span> <span class="p">(</span><span class="n">new</span> <span class="nb">id</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">):</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="n">Add</span> <span class="n">the</span> <span class="n">location</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">agent</span> <span class="n">locations</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">availability</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">occupied</span> <span class="p">(</span><span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">Else</span> <span class="p">(</span><span class="n">voxel</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">removed</span><span class="p">):</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>  <span class="n">Remove</span> <span class="n">the</span> <span class="n">location</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">agent</span> <span class="n">locations</span> <span class="nb">list</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">availability</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">unoccupied</span> <span class="p">(</span><span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="n">to</span> <span class="n">the</span> <span class="n">new</span> <span class="nb">id</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">agents</span> <span class="n">location</span> <span class="nb">list</span>
 </code></pre></div>
 </td></tr></table></p>
 <p></br></p>
@@ -988,23 +1027,23 @@
 <figcaption>Update availlability lattice</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Update_voxels.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">Retrieve</span> <span class="n">the</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">occupied</span> <span class="n">voxels</span> <span class="p">(</span><span class="nb">id</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">Move</span> <span class="n">the</span> <span class="n">occupied</span> <span class="n">voxels</span> <span class="n">one</span> <span class="n">place</span> <span class="n">up</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">Subtract</span> <span class="n">the</span> <span class="n">new</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">old</span> <span class="n">occupation</span> <span class="n">lattice</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">Now</span> <span class="n">only</span> <span class="n">the</span> <span class="n">voxels</span> <span class="k">with</span> <span class="n">voxels</span> <span class="n">beneath</span> <span class="n">are</span> <span class="n">available</span> <span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">avail_lattice</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">Set</span> <span class="n">the</span> <span class="n">voxels</span> <span class="n">on</span> <span class="n">ground</span> <span class="n">level</span> <span class="n">which</span> <span class="n">have</span> <span class="n">now</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">0</span> <span class="p">(</span><span class="n">unoccupied</span><span class="p">)</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">so</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">can</span> <span class="n">grow</span> <span class="n">to</span> <span class="n">the</span> <span class="n">sides</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Update_voxels.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Retrieve</span> <span class="n">the</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">occupied</span> <span class="n">voxels</span> <span class="p">(</span><span class="nb">id</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Move</span> <span class="n">the</span> <span class="n">occupied</span> <span class="n">voxels</span> <span class="n">one</span> <span class="n">place</span> <span class="n">up</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">Subtract</span> <span class="n">the</span> <span class="n">new</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">old</span> <span class="n">occupation</span> <span class="n">lattice</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">Now</span> <span class="n">only</span> <span class="n">the</span> <span class="n">voxels</span> <span class="k">with</span> <span class="n">voxels</span> <span class="n">beneath</span> <span class="n">are</span> <span class="n">available</span> <span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">avail_lattice</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">Set</span> <span class="n">the</span> <span class="n">voxels</span> <span class="n">on</span> <span class="n">ground</span> <span class="n">level</span> <span class="n">which</span> <span class="n">have</span> <span class="n">now</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">0</span> <span class="p">(</span><span class="n">unoccupied</span><span class="p">)</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">so</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">can</span> <span class="n">grow</span> <span class="n">to</span> <span class="n">the</span> <span class="n">sides</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="building-depth">Building depth</h3>
@@ -1014,21 +1053,21 @@
 <figcaption>Building depth</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Building_depth.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="nb">max</span><span class="o">.</span> <span class="n">building</span> <span class="n">depth</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Create</span> <span class="n">stencils</span> <span class="n">to</span> <span class="n">check</span> <span class="n">the</span> <span class="n">different</span> <span class="n">directions</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Create</span> <span class="n">conditions</span> <span class="k">for</span> <span class="n">each</span> <span class="n">direction</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">In</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">In</span> <span class="n">the</span> <span class="n">y</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Building_depth.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="nb">max</span><span class="o">.</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Create</span> <span class="n">stencils</span> <span class="n">to</span> <span class="n">check</span> <span class="n">the</span> <span class="n">different</span> <span class="n">directions</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Create</span> <span class="n">conditions</span> <span class="k">for</span> <span class="n">each</span> <span class="n">direction</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">In</span> <span class="n">the</span> <span class="n">x</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">In</span> <span class="n">the</span> <span class="n">y</span><span class="o">-</span><span class="n">direction</span> <span class="n">there</span> <span class="n">can</span><span class="err">’</span><span class="n">t</span> <span class="n">be</span> <span class="n">more</span> <span class="n">voxels</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span> <span class="n">than</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">building</span> <span class="n">depth</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="final-mass">Final mass</h3>
@@ -1062,17 +1101,17 @@
 <figcaption>Centers of clusters</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Cluster_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">massing</span> <span class="n">lattice</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Find</span> <span class="n">the</span> <span class="n">different</span> <span class="n">clusters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">grown</span> <span class="n">ABM</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">voxel</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">cluster</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Cluster_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">massing</span> <span class="n">lattice</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">Find</span> <span class="n">the</span> <span class="n">different</span> <span class="n">clusters</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">grown</span> <span class="n">ABM</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">voxel</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">cluster</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="shafts">Shafts</h3>
@@ -1082,17 +1121,17 @@
 <figcaption>Shafts</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Shaft_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">Create</span> <span class="mi">4</span> <span class="n">clusters</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">chosen</span> <span class="n">cluster</span> <span class="n">centres</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">row</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">clusters</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">shafts</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Shaft_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Create</span> <span class="mi">4</span> <span class="n">clusters</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">chosen</span> <span class="n">cluster</span> <span class="n">centres</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">Choose</span> <span class="n">which</span> <span class="n">row</span> <span class="n">of</span> <span class="n">voxels</span> <span class="n">fits</span> <span class="n">the</span> <span class="n">best</span> <span class="k">as</span> <span class="n">centre</span> <span class="n">of</span> <span class="n">the</span> <span class="n">clusters</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">shafts</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="paths">Paths</h3>
@@ -1102,21 +1141,21 @@
 <figcaption>Paths</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Corridor_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">shafts</span><span class="p">,</span> <span class="n">main</span> <span class="n">entrance</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">For</span> <span class="n">every</span> <span class="n">cluster</span> <span class="n">center</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">shaft</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">For</span> <span class="n">every</span> <span class="n">shaft</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">corridors</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Corridor_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">shafts</span><span class="p">,</span> <span class="n">main</span> <span class="n">entrance</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">For</span> <span class="n">every</span> <span class="n">cluster</span> <span class="n">center</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">shaft</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">For</span> <span class="n">every</span> <span class="n">shaft</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="n">Find</span> <span class="n">the</span> <span class="n">shortest</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">main</span> <span class="n">entrance</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">corridors</span>
 </code></pre></div>
 </td></tr></table>
 </br></p>
