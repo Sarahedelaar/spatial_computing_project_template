@@ -536,9 +536,66 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SVF
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       SVF
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sun-vectors" class="md-nav__link">
+    Sun vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-intersection-of-sun-ray-with-context-mesh" class="md-nav__link">
+    Compute intersection of sun ray with context mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregate-simulation-result-in-the-sun-access-lattice" class="md-nav__link">
+    Aggregate simulation result in the sun access lattice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolate-lowres-lattices-to-highres" class="md-nav__link">
+    Interpolate lowres lattices to highres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -728,6 +785,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sun-vectors" class="md-nav__link">
+    Sun vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-intersection-of-sun-ray-with-context-mesh" class="md-nav__link">
+    Compute intersection of sun ray with context mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregate-simulation-result-in-the-sun-access-lattice" class="md-nav__link">
+    Aggregate simulation result in the sun access lattice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolate-lowres-lattices-to-highres" class="md-nav__link">
+    Interpolate lowres lattices to highres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -816,7 +916,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">sky_sphere</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">subdivisions</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="sun-vectors">Sun vectors</h1>
+<h3 id="sun-vectors">Sun vectors</h3>
 <p>Computing SVF vectors with skydome
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
@@ -861,7 +961,7 @@
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="c1">#p.show(use_ipyvtk=True)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="compute-intersection-of-sun-ray-with-context-mesh">Compute intersection of sun ray with context mesh</h1>
+<h3 id="compute-intersection-of-sun-ray-with-context-mesh">Compute intersection of sun ray with context mesh</h3>
 <p>Computing SVF vectors with skydome
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
@@ -914,7 +1014,7 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">tri_id3</span><span class="p">,</span> <span class="n">ray_id3</span> <span class="o">=</span> <span class="n">context_mesh</span><span class="o">.</span><span class="n">ray</span><span class="o">.</span><span class="n">intersects_id</span><span class="p">(</span><span class="n">ray_origins</span><span class="o">=</span><span class="n">ray_src3</span><span class="p">,</span> <span class="n">ray_directions</span><span class="o">=</span><span class="n">ray_dir3</span><span class="p">,</span> <span class="n">multiple_hits</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="aggregate-simulation-result-in-the-sun-access-lattice">Aggregate simulation result in the sun access lattice</h1>
+<h3 id="aggregate-simulation-result-in-the-sun-access-lattice">Aggregate simulation result in the sun access lattice</h3>
 <p>Compute percentage of time that each voxel sees sun
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
@@ -1069,7 +1169,7 @@
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">sky_acc_lattice</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="interpolate-lowres-lattices-to-highres">Interpolate lowres lattices to highres</h1>
+<h3 id="interpolate-lowres-lattices-to-highres">Interpolate lowres lattices to highres</h3>
 <p>Computing intersection
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
@@ -1162,7 +1262,7 @@
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">f</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">sky_acc_highres</span><span class="p">,</span> <span class="s2">&quot;Sky view&quot;</span><span class="p">,</span> <span class="s2">&quot;../data/sky_view_highres.png&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="credits">Credits</h1>
+<h3 id="credits">Credits</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>

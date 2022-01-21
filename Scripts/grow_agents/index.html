@@ -572,9 +572,73 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Initialization
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Initialization
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-the-neighborhood-stencil" class="md-nav__link">
+    Define the neighborhood (stencil)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-the-environment" class="md-nav__link">
+    Setup the environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abm-simulation" class="md-nav__link">
+    ABM simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-the-cluster-centers" class="md-nav__link">
+    Find the cluster centers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-floor-plans" class="md-nav__link">
+    Create floor plans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -728,6 +792,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-the-neighborhood-stencil" class="md-nav__link">
+    Define the neighborhood (stencil)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-the-environment" class="md-nav__link">
+    Setup the environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abm-simulation" class="md-nav__link">
+    ABM simulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-the-cluster-centers" class="md-nav__link">
+    Find the cluster centers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-floor-plans" class="md-nav__link">
+    Create floor plans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -784,7 +898,7 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="k">return</span> <span class="n">pv_mesh</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="define-the-neighborhood-stencil">Define the neighborhood (stencil)</h1>
+<h3 id="define-the-neighborhood-stencil">Define the neighborhood (stencil)</h3>
 <p>Stencil: horizontal
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -809,7 +923,7 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">stencil_hor</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="setup-the-environment">Setup the environment</h1>
+<h3 id="setup-the-environment">Setup the environment</h3>
 <p>Load the envelope lattice as the availability lattice
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1002,7 +1116,7 @@
 <a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="c1">#p.show(screenshot=&quot;../data/init_agents.png&quot;)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="abm-simulation">ABM simulation</h1>
+<h3 id="abm-simulation">ABM simulation</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># make a dictionary from the max amount of voxels per space</span>
@@ -1432,7 +1546,7 @@
 <a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="n">avail_lattice</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="find-the-cluster-centers">Find the cluster centers</h1>
+<h3 id="find-the-cluster-centers">Find the cluster centers</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1542,7 +1656,7 @@
 <a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="c1"># cluster_center_lattice.to_csv(csv_path)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="create-floor-plans">Create floor plans</h1>
+<h3 id="create-floor-plans">Create floor plans</h3>
 <p>Slice the massing lattice
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
@@ -1655,7 +1769,7 @@
 <a id="__codelineno-20-45" name="__codelineno-20-45"></a><span class="c1">#p.show(screenshot=&quot;../data/floor_plan_legend.png&quot;)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h1 id="credits">Credits</h1>
+<h3 id="credits">Credits</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
