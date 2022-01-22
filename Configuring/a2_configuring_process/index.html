@@ -910,7 +910,7 @@
                 <h1 id="configuring-process"><strong>Configuring: process</strong></h1>
 <h3 id="voxelized-envelope-low-res"><strong>Voxelized envelope low res</strong></h3>
 <blockquote>
-<p>The voxelized envelope consists of.................... (Fig. 1)</p>
+<p>Shown beneath is the low resolution voxelized envelope. It visualizes each independent voxel in the envelope. (Fig. 1)</p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/lowres_lattice.png" />
@@ -919,7 +919,7 @@
 </figure>
 <h3 id="voxelized-envelope-high-res"><strong>Voxelized envelope high res</strong></h3>
 <blockquote>
-<p>The voxelized envelope consists of.................... (Fig. 2)</p>
+<p>Shown here is the high resolution voxelized envelope. (Fig. 2)</p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/highres_lattice.png" />
@@ -938,7 +938,7 @@
 <h3 id="main-entrance">Main entrance</h3>
 <blockquote>
 <p>In this analysis our objective was to calculate the distance from every voxel to the main entrance. The main entrance was initialized by us prior to the analysis.
-</br></p>
+For creating a distance field based on walking through the building, we first created two different neigbourhood stencils to work with. The first stencil shows that going one voxel sideways (in x- or y-direction) the value of the neighbours will increment with 1. However, when someone wants to go a level up or down, this costs more energy than walking on the same level. Therefore, the neighbours in the z-direction will increment with the value of 2.</p>
 </blockquote>
 <p><img src="/img/Entrance.png" align="right"/>
 <img src="/img/Voxels.png" align="left"/></p>
