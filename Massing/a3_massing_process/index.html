@@ -739,18 +739,38 @@
                 
                 <h1 id="massing-process"><strong>Massing: process</strong></h1>
 <hr />
-<h1 id="functions-bespreken">FUNCTIONS BESPREKEN</h1>
+<h1 id="functions-bespreken-per-massa">FUNCTIONS BESPREKEN PER MASSA</h1>
 <h2 id="squareness">Squareness</h2>
+<blockquote>
+<p>Explanation of the squareness</p>
+</blockquote>
+<figure>
+<p><img align="left" alt="Squareness" src="../../img/squareness.png" />
+  </p>
+<figcaption>Squareness</figcaption>
+</figure>
 <p><strong> Pseudo code</strong>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Squareness.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">fields</span><span class="p">,</span> <span class="n">program</span> <span class="n">of</span> <span class="n">requirement</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Squareness.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Input</span><span class="p">:</span> <span class="mi">1</span><span class="n">d</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">free</span> <span class="n">neighbours</span><span class="p">,</span> <span class="n">squareness</span> <span class="n">weight</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">SQUARE</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">use</span> <span class="n">the</span> <span class="n">numpy</span> <span class="n">unique</span> <span class="n">function</span> <span class="n">to</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">return</span> <span class="n">how</span> <span class="n">many</span> <span class="n">times</span> <span class="n">each</span> <span class="n">neighbour</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">list</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">return</span> <span class="n">what</span> <span class="n">the</span> <span class="n">first</span> <span class="n">unique</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">of</span> <span class="n">each</span> <span class="n">neighbour</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">for</span> <span class="n">every</span> <span class="n">unique</span> <span class="n">free</span> <span class="n">neighbour</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="n">evaluate</span> <span class="n">each</span> <span class="n">agent</span> <span class="k">with</span> <span class="n">the</span> <span class="err">“</span><span class="n">evaluate_voxel</span><span class="err">”</span> <span class="n">function</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="k">raise</span> <span class="n">the</span> <span class="n">squareness</span> <span class="n">weight</span> <span class="n">by</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">times</span> <span class="n">the</span> <span class="n">neighbour</span> <span class="n">exist</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  <span class="n">multiply</span> <span class="n">the</span> <span class="n">old</span> <span class="n">value</span> <span class="k">with</span> <span class="n">the</span> <span class="n">calculated</span> <span class="n">squareness</span> <span class="n">value</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">output</span><span class="p">:</span> <span class="n">value</span> <span class="n">of</span> <span class="n">each</span> <span class="n">free</span> <span class="n">neighbour</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="seed-allocationinitialization"><strong>Seed allocation/initialization</strong></h3>
@@ -849,7 +869,7 @@
 </code></pre></div>
 </td></tr></table></p>
 <p></br></p>
-<h3 id="updat-voxel">Updat voxel</h3>
+<h3 id="update-voxel">Update voxel</h3>
 <figure>
 <p><img align="left" alt="Update" src="../../img/update.png" />
   </p>
