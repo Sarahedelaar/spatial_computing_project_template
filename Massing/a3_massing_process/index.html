@@ -924,25 +924,33 @@
 <p>Before choosing a final mass there were four options as we had two functions to choose out off. Below are the results of both functions off, float function off, both functions on and finally the final mass that has only the building depth function on and the no float function off.</p>
 </blockquote>
 <h3 id="functions-and-expectations">Functions and expectations</h3>
-<p>No float function:</p>
-<p>Building depth:</p>
-<p>Both on:</p>
-<p>Both off:</p>
+<p>Both off:
+We ran the simulation multiple times to see the effect of some specific functions, especially the function which prevents floating parts and the function on limiting the building depth. 
+The first configuration is the result of simulation with both functions turned off. This configuration consists out of one big mass with for a big part a horizontal roof. This makes it difficult for the sun to penetrate the middle of the building. One of the design principles was to create a good living condition with as much light as possible. This configuration does not meet this criteria. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_off.png" />
   </p>
 <figcaption>Mass variant, both functions off</figcaption>
 </figure>
+<p>No float function:
+In the second configuration the function which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours and is therefore not an option.
+To prevent getting a big wall as configuration, there needs to be experimented with extra fields which will push some of the agents to the other side of the plot. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_no_float.png" />
   </p>
 <figcaption>Mass variant, float function on</figcaption>
 </figure>
+<p>Both on:
+The third time we ran the simulation with both functions on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact on the shape than the limitation of the building depth. 
+As with the previous configuration is this mass too high, so it will cast too much shadow and is therefore not a fit for our project.</p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_on.png" />
   </p>
 <figcaption>Mass variant, both functions on</figcaption>
 </figure>
+<p>Building depth:
+For the last configuration, only the limitation of the building depth is used. We choose a maximum building depth of 3 voxels, because then the building depth will become at most about 10 metres. When there are windows on both sides, most part of the building will be able to get sunlight. 
+The result is a configuration which looks like the first configuration, but with a lot more height differences in the roof and walls. Therefore the sun can penetrate the building at more places. Next to that, the building does not cast too much shadow on the surrounding. To conclude, this configuration fits our design goals best and will therefore be our final mass. </p>
 <figure>
 <p><img align="left" alt="Final mass" src="../../img/massing.png" />
   </p>

@@ -468,6 +468,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#visibility-and-accesibility-reflection" class="md-nav__link">
+    Visibility and accesibility reflection
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -831,6 +838,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#visibility-and-accesibility-reflection" class="md-nav__link">
+    Visibility and accesibility reflection
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -872,10 +886,13 @@
 <figcaption>Reflection visualized, showing the division between public (purple) and private (green)</figcaption>
 </figure>
 <figure>
-<p><img alt="Reflection" src="../../img/legend_1.png" /></p>
+<p><img alt="Reflection" src="../../img/greenery_reflection.png" /></p>
 </figure>
 <figure>
-<p><img alt="Reflection" src="../../img/legend_2.png" /></p>
+<p><img alt="Reflection" src="../../img/noise_reflection.png" /></p>
+</figure>
+<figure>
+<p><img alt="Reflection" src="../../img/sun_acc_reflection.png" /></p>
 </figure>
 <p>Reflecting back on the generated floor plan, we can see that the separation between public and private places has been established. All the residential voxels are at the top half of the building and also at the upper levels of the building. The public spaces are at the bottom half of the building and mostly on the ground floor. In our opinion this design goals has been met.</p>
 <p>The final floor plan generator we have conceptualized can be considered as our most modular aspect of the building. Not only does every interior tile fit inside the voxels, they can also easily be swapped out and reorganized. This means that the function of a room can be changed with ease, without major adjustments to the shape of the building. We haven’t implemented a similar tactic for the façade, which is something which can be implemented for a project in the coming years.</p>
@@ -887,14 +904,10 @@ the metro network. And then forming the adjacency matrix</p>
 <h2 id="configuring">Configuring</h2>
 <p>Configuring: the studies on the voxel size look promising but the staircases have to also
 include the standing platforms. 
-Page 29, perhaps you can put the shafts in the middle as you
-first create the shafts and then the corridors. 
-Showing hidden corridors in the plan tiles with a
-hatch, similar to page 38, and explaining the meta-level principles of the modular floor planning
-process. 
-A reflection on the marked position of the windows (visibility) or doorways
-(accessibility) on the edges and their potential effects on the configuration rules will be
-appreciated (for the website especially).</p>
+Page 29, perhaps you can put the shafts in the middle as you first create the shafts and then the corridors. 
+Showing hidden corridors in the plan tiles with a hatch, similar to page 38, and explaining the meta-level principles of the modular floor planning
+process.
+A reflection on the marked position of the windows (visibility) or doorways (accessibility) on the edges and their potential effects on the configuration rules will be appreciated (for the website especially).</p>
 <p>● 2 stencils for computing the distances, the price of the vertical movement is considered
 higher  (+)
 ● How did you construct the diagrams on 17-20 slide,amazing diagrams, love the gamified
@@ -904,6 +917,8 @@ style</p>
 <p>The final voxel is 3.6*3.6*3.24 (w*d*h) meters. With the minivoxel being 0.9*0.9*0.54 (w*d*h) meters to represent a flight of three stairs. (Fig. 3) The standing platforms between the stairs are 0.90 meters, ideally this would be 1.20 meters so that two people can pass at the same time. </p>
 </blockquote>
 <p>The voxel size might need some improvement as the standing platform is 0.90 meter when it ideally would be 1.20 meter or even bigger in depth. This is based on the width that a person needs for a walkway; 0.60 meter. To later improve this there would need to be an extra minivoxel with instead of 3 steps just one and the rest of the depth as standing platform.</p>
+<h3 id="visibility-and-accesibility-reflection">Visibility and accesibility reflection</h3>
+<p>A reflection on the marked position of the windows (visibility) or doorways (accessibility) on the edges and their potential effects on the configuration rules will be appreciated (for the website especially).</p>
 <h2 id="massing">Massing</h2>
 <p>Massing: the pixelated diagrams are on a whole new level of quality! Bravo! The special
 functions deserve to be explained one by one and more elaborately (on the website). With ABM,
