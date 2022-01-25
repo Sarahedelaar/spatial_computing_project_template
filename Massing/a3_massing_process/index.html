@@ -982,8 +982,13 @@
 </td></tr></table></p>
 <h3 id="seed-allocation"><strong>Seed allocation</strong></h3>
 <blockquote>
-<p>We started the massing part with the initializing the agents. For that we used the function to evaluate voxels. At first the agents are placed at the spot where they feel most comfortable. Furthermore, we added another feature to the initialization part. When the agents are at the place with the highest values, they are moved down to ground level. This is done to discourage too much floating agents later in the process.</p>
+<p>We started the massing part with the initializing the agents. For that we used the function to evaluate voxels. At first the agents are placed at the spot where they feel most comfortable, see the first image. Furthermore, we added another feature to the initialization part. When the agents are at the place with the highest values, they are moved down to ground level, which can be seen in the second image. This is done to discourage too many floating agents later in the process.</p>
 </blockquote>
+<figure>
+<p><img align="left" alt="Initialization" src="../../img/init_agents_original.png" />
+  </p>
+<figcaption>Original initialization of the agents</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="Initialization" src="../../img/agents_init.png" />
   </p>
@@ -1048,8 +1053,15 @@
 </td></tr></table></p>
 <h2 id="squareness">Squareness</h2>
 <blockquote>
-<p>Squareness is a behaviour we created to encourage the agents to grow in rectangular shapes to create usable spaces. When a neighbour exists for multiple voxels it will increase the squareness and therefore its value will be raised. </p>
+<p>Squareness is a behaviour we created to encourage the agents to grow in rectangular shapes to create usable spaces. When a neighbour exists for multiple voxels it will increase the squareness and therefore its value will be raised.</p>
 </blockquote>
+<p>This gif illustrates the effect of this behaviour. It can be seen that the agents grow in a rectangular shape.
+The behaviour works the way it was supposed to work, so there are no recommendations for improvement on this behaviour.</p>
+<figure>
+<p><img alt="GIF" src="../../img/gif_squareness.gif" />
+  </p>
+<figcaption>Gif of the squareness</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="Squareness" src="../../img/squareness.png" />
   </p>
@@ -1083,6 +1095,12 @@
 <blockquote>
 <p>This behaviour is created to prevent agents from floating in the air in order to create a more realistic building. By only making the voxels available which have voxels beneath, the agents can only grow at places which are connected to the ground</p>
 </blockquote>
+<p>This example is made with the same preferences as in the squareness example. The effect of this behaviour can be clearly seen. None of the agents are floating in the air, they only go up or to the side, that means the behaviour works as expected. However, the agents tend to go up whereas in the previous example of the squareness, the agents did not want to go up. To improve this behaviour it is necessary to find out why this is happening and thereby how to improve it such that the agents do not only want to go up.</p>
+<figure>
+<p><img align="left" alt="Update" src="../../img/gif_no_float.gif" />
+  </p>
+<figcaption>GIF Prevent floating agents</figcaption>
+</figure>
 <figure>
 <p><img align="left" alt="Update" src="../../img/update.png" />
   </p>
@@ -1117,6 +1135,19 @@
   </p>
 <figcaption>Building depth</figcaption>
 </figure>
+<p>In the two gifs beneath, you can see how this behaviour works on the growth of the agents. For the first simulation a maximum building depth of 3 voxels is used. It can be seen that there are never more than 3 voxels next to each other in the x- or y-direction.
+The second simulation uses a maximum building depth of 6 voxels. In this example you can clearly see the effect of this behaviour. The yellow agent wants to grow towards the purple agent, but it cannot grow in one straight line, because then it will exceed the building depth. Therefore it grows to the side at some places.</p>
+<figure>
+<p><img alt="GIF" src="../../img/gif_building_depth_6.gif" />
+  </p>
+<figcaption>Gif of the building depth (6)</figcaption>
+</figure>
+<figure>
+<p><img alt="GIF" src="../../img/gif_building_depth.gif" />
+  </p>
+<figcaption>Gif of the building depth</figcaption>
+</figure>
+<p>This behaviour can be optimized in future projects. At this moment the function looks at the x- and y-direction separately. However, when you look at the second example, one row of voxels of more than 6 voxels would not be a problem for the sun access. It becomes a problem when the maximum building depth is reached in both directions, this should be taken into account when improving this behaviour.</p>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Building_depth.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
