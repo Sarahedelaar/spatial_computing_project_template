@@ -278,12 +278,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#voxel-size-vergelijkingen-met-oude-size" class="md-nav__link">
-    Voxel size vergelijkingen met oude size?
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Voxel size vergelijkingen met oude size?">
+    <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voxel-size" class="md-nav__link">
+    Voxel size
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#voxelized-envelope-low-res" class="md-nav__link">
@@ -295,13 +302,6 @@
           <li class="md-nav__item">
   <a href="#voxelized-envelope-high-res" class="md-nav__link">
     Voxelized envelope high res
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#voxel-size" class="md-nav__link">
-    Voxel size
   </a>
   
 </li>
@@ -838,12 +838,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#voxel-size-vergelijkingen-met-oude-size" class="md-nav__link">
-    Voxel size vergelijkingen met oude size?
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Voxel size vergelijkingen met oude size?">
+    <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voxel-size" class="md-nav__link">
+    Voxel size
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#voxelized-envelope-low-res" class="md-nav__link">
@@ -855,13 +862,6 @@
           <li class="md-nav__item">
   <a href="#voxelized-envelope-high-res" class="md-nav__link">
     Voxelized envelope high res
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#voxel-size" class="md-nav__link">
-    Voxel size
   </a>
   
 </li>
@@ -934,38 +934,59 @@
                 
                 
                 <h1 id="configuring-process"><strong>Configuring: process</strong></h1>
-<h2 id="voxel-size-vergelijkingen-met-oude-size">Voxel size vergelijkingen met oude size?</h2>
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>In this section all the data which has been made is gathered. The data consists of different fields, in the fields are various perspectives analysed throughout the whole envelope. The choice on the perspectives come from a translation of the design goals and design principles. This data will be used for the next part, massing.</p>
+</blockquote>
+<h3 id="voxel-size"><strong>Voxel size</strong></h3>
+<blockquote>
+<p>To define an appropriate voxel size, we used the size of 1 flight of stairs. We defined the size by the use of stairs to create an upward route within the boundaries of a voxel. The dimensions of the stairs size are approximated according to the books ‘’De Menselijke maat’’ and ‘’Het Bouwbesluit’’. These books create a couple requirements the stairs need to fit.</p>
+</blockquote>
+<ul>
+<li>
+<p>Requirements: </p>
+<ul>
+<li>Angle stairs = 30° – 40°</li>
+<li>Rise + Thread + rise =60 – 66 cm</li>
+<li>Width 1 person = 90 cm</li>
+</ul>
+</li>
+<li>
+<p>Our stairs: </p>
+<ul>
+<li>Angle stairs = 32°</li>
+<li>Rise + Thread + rise = 66 cm</li>
+<li>Width 1 person = 90 cm</li>
+</ul>
+</li>
+</ul>
+<p>The final voxel size chosen according to the flight of stairs is 3.6 x 3.6 x 3.24 (width x depth x height) meters. This voxel size is based on the  measurements of a staircase. The sizes of a mini voxel are 0.9 x 0.9 x 0.54 (width x depth x height) meters to represent a three flight of the stairs. Figure 1 shows the relation between the meso voxel and the mini voxel. The standing platforms between the stairs are 0.90 meters in depth. </p>
+<figure>
+<p><img align="left" alt="Voxelsize" src="../../img/voxelsize.jpg" />
+  </p>
+<figcaption>Fig. 1 Voxelsize</figcaption>
+</figure>
 <h3 id="voxelized-envelope-low-res"><strong>Voxelized envelope low res</strong></h3>
 <blockquote>
-<p>Shown beneath is the low resolution voxelized envelope. It visualizes each independent voxel in the envelope. (Fig. 1)</p>
+<p>In figure 2, the low resolution voxelized envelope is shown. The voxel size of this envelope is 10.8 x 10.8 x 9.72 m, 3 times the size of the meso voxel. The lowres envelope will be used to compute the different fields, because the computer cannot handle too many computations. Later in the process the field will be interpolated from the lowres envelope to the highres envelope.  </p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/lowres_lattice.png" />
   </p>
-<figcaption>Fig. 1 Voxelized envelope lowres</figcaption>
+<figcaption>Fig. 2 Voxelized envelope lowres</figcaption>
 </figure>
 <h3 id="voxelized-envelope-high-res"><strong>Voxelized envelope high res</strong></h3>
 <blockquote>
-<p>Shown here is the high resolution voxelized envelope. (Fig. 2)</p>
+<p>Figure 3 shows the high resolution envelope, with a voxel size of 3.6 x 3.6 x 3.24 metres. Eventually we want all the date in the high resolution. Therefore, when the data is computed in the low resolution it is converted into the high resolution. Eventually the agent grow model will also use the high resolution envelope. </p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/highres_lattice.png" />
   </p>
-<figcaption>Fig. 2 Voxelized envelope highres</figcaption>
-</figure>
-<h3 id="voxel-size"><strong>Voxel size</strong></h3>
-<blockquote>
-<p>The final voxel is 3.6*3.6*3.24 (w*d*h) meters. With the minivoxel being 0.9*0.9*0.54 (w*d*h) meters to represent a flight of three stairs. (Fig. 3) The standing platforms between the stairs are 0.90 meters in depth, ideally this would be 1.20 meters so that two people can pass at the same time. </p>
-</blockquote>
-<figure>
-<p><img align="left" alt="Voxelsize" src="../../img/voxelsize.jpg" />
-  </p>
-<figcaption>Fig. 3 Voxelsize</figcaption>
+<figcaption>Fig. 3 Voxelized envelope highres</figcaption>
 </figure>
 <h3 id="main-entrance">Main entrance</h3>
 <blockquote>
-<p>In this analysis our objective was to calculate the distance from every voxel to the main entrance. The main entrance was initialized by us prior to the analysis.
-For creating a distance field based on walking through the building, we first created two different neigbourhood stencils to work with. The first stencil shows that going one voxel sideways (in x- or y-direction) the value of the neighbours will increment with 1. However, when someone wants to go a level up or down, this costs more energy than walking on the same level. Therefore, the neighbours in the z-direction will increment with the value of 2.</p>
+<p>In this analysis our objective was to calculate the distance from every voxel to the main entrance. The main entrance was initialized by us prior to the analysis. The main entrance is the voxel with the minimum aggregated distance from the voxel to the main street and public transport stops. For creating a distance field based on walking through the building, we first created two different neighbourhood stencils to work with. The first stencil shows moving horizontally (in x- or y-direction), the value of the neighbours will increment with 1. However, when someone wants to go a level up or down (move vertically), this person needs to take the stairs and this costs more energy than walking on the same level. Therefore, the neighbours in the z-direction will increment with the value of 2. The result is a distance to the main entrance field in which 1 means the closest and 0 the furthest.</p>
 </blockquote>
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Entrance.png" />
@@ -981,7 +1002,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="distance-to-ground">Distance to ground</h3>
 <blockquote>
-<p>This analysis works in a similar way as the previous one. This time every voxel calculates the distance between itself and the ground floor.</p>
+<p>This analysis works in a similar way as the distance to the main entrance. This time every voxel calculates the distance between itself and the ground floor. To compute this field only one neighbourhood stencil is needed, because only the vertical movement is incorporated. The distance to the ground field is created to be able to specify how close a certain space want to be to ground level. The result is a distance to the ground field in which 1 is the closest to ground level and 0 the furthest.</p>
 </blockquote>
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Ground.png" />
@@ -992,7 +1013,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="noise">Noise</h3>
 <blockquote>
-<p>Noise is estimated by looking at the busiest roads surrounding the building site. Noise pollution gets reduced once you get further away from the sound source. So this analysis is also calculated by means of the distance between a certain point and a voxel.</p>
+<p>Noise is another incorporated perspective, because one of the design principles is to create a good living condition. Reduce noise pollution is one of the aspects of a good living condition. Noise is estimated by looking at the busiest roads surrounding the building site. Noise pollution gets reduced once you get further away from the sound source. So this analysis is calculated by means of the distance between a certain point and a voxel and loudness of each noise source. The result is a noise field in which 1 means the least noise and 0 the most. </p>
 </blockquote>
 <figure>
 <p><img alt="Noise" src="../../img/Noise.png" />
@@ -1003,7 +1024,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="sun-access">Sun access</h3>
 <blockquote>
-<p>For this analysis we had to take the annual path of the sun. From the points of this path the sun shoots rays of light that hit the voxels. The more hits, the higher the sun accessibility.</p>
+<p>Sun access is a perspective which is also related to the design principle of creating a good living condition. Getting enough sun also belongs to a good living condition. For this analysis we had to take the annual path of the sun. From the points of this path the sun shoots rays of light that hit the voxels. The more hits, the higher the sun accessibility. The result is a sun access field in which 1 means the most sun and 0 the least.</p>
 </blockquote>
 <figure>
 <p><img alt="Sun accessibility" src="../../img/Sun%20acc.png" />
@@ -1014,7 +1035,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="shadow-casting">Shadow casting</h3>
 <blockquote>
-<p>Shadow casting extends the previous analysis, by inverting the hits with the sun. The inverted hits are the shadows that cast a shadow over surrounded buildings.</p>
+<p>Calculating the shadows is an addition to the previous analysis. Sun rays are computed in an inverted direction to see where they hit the context. When there is a hit, this means the envelope will cast shadow on the surrounding. The result is a solar envelope in which we the parts which block the most sun are cut away. After the agent growth we can check is the building will not cast too much shadow by comparing the configuration with the solar envelope.</p>
 </blockquote>
 <figure>
 <p><img alt="Shadow cast" src="../../img/Shadow%20cast.png" />
@@ -1025,7 +1046,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="sky-view-factor">Sky view factor</h3>
 <blockquote>
-<p>In the sky view analysis we calculated the amount of a sky a voxel can see without being blocked by surrounded structures.</p>
+<p>The amount of light which gets into a room has to do with the sun access, but also with the sky view. The more sky is visible, the more light will get into a room. In the sky view analysis we calculated the amount of a sky a voxel can see without being blocked by surrounded structures. The result is a sky view field in which 1 means the biggest sky view fact and 0 the smallest.</p>
 </blockquote>
 <figure>
 <p><img alt="SVF" src="../../img/Sky.png" />
@@ -1036,7 +1057,7 @@ For creating a distance field based on walking through the building, we first cr
 
 <h3 id="view-on-greenery">View on greenery</h3>
 <blockquote>
-<p>This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam. These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery.</p>
+<p>The last aspect of a good living condition was a good view on greenery, therefore we created a view on greenery field. This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam. These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery. The result only includes the current greenery in the surrounding, in which 1 means the most view on greenery and 0 the least. However, to improve this analysis in future projects, the greenery, which will eventually be included in the plot, also needs to be taken into account. </p>
 </blockquote>
 <figure>
 <p><img alt="Greenery" src="../../img/greenery.png" />
