@@ -446,6 +446,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring" class="md-nav__link">
+    Configuring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#massing" class="md-nav__link">
+    Massing
+  </a>
+  
+    <nav class="md-nav" aria-label="Massing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#growth-process" class="md-nav__link">
+    Growth process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    Recommendations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forming" class="md-nav__link">
+    Forming
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -768,6 +816,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring" class="md-nav__link">
+    Configuring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#massing" class="md-nav__link">
+    Massing
+  </a>
+  
+    <nav class="md-nav" aria-label="Massing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#growth-process" class="md-nav__link">
+    Growth process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    Recommendations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forming" class="md-nav__link">
+    Forming
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -798,10 +894,32 @@
 <figure>
 <p><img alt="Reflection" src="../../img/sun_acc_reflection.png" />
   </p>
-<figcaption>** Residential area is marked in green in the pictures above **</figcaption>
+<figcaption>Residential area is marked in green in the pictures above</figcaption>
 </figure>
 <p>Reflecting back on the generated floor plan, we can see that the separation between public and private places has been established. All the residential voxels are at the top half of the building and also at the upper levels of the building. The public spaces are at the bottom half of the building and mostly on the ground floor. In our opinion this design goals has been met. The public spaces can be seen inside of the box in the images.</p>
 <p>The final floor plan generator we have conceptualized can be considered as our most modular aspect of the building. Not only does every interior tile fit inside the voxels, they can also easily be swapped out and reorganized. This means that the function of a room can be changed with ease, without major adjustments to the shape of the building. We haven’t implemented a similar tactic for the façade, which is something which can be implemented for a project in the coming years.</p>
+<h2 id="planning">Planning</h2>
+<h2 id="configuring">Configuring</h2>
+<h2 id="massing">Massing</h2>
+<h3 id="growth-process">Growth process</h3>
+<ul>
+<li>In our project we used the following order in the massing part: <ol>
+<li>Initialize agents</li>
+<li>Grow agents</li>
+<li>Find average voxel per agent</li>
+<li>Grow shafts</li>
+<li>Grow corridors</li>
+</ol>
+</li>
+</ul>
+<p>This is one of the options to do this process. However, this is not the way to get an optimal result. A better way would be to create all the functions and put them in a for loop and thereby updating the manifold distance fields. When the complete process as described above has been completed once, the manifold distance fields can be updated by using the corridors as walking routes. Than the process can be run again, every time updating the result. By doing this, the manifold distances are more related to the real world and thereby create a better result. The downside to this method is that is takes a lot of computational power, which might not be possible.</p>
+<h3 id="recommendations">Recommendations</h3>
+<p>In this project we started implementing new aspects in order to improve the process. We made a few steps in the right direction, however these new elements still need a lot of improvement. </p>
+<p>We incorporated a floorplan generator to create floorplans in a systematic way and thereby guide the forming floorplans. The floorplan generator already includes furniture, hidden corridors and wall borders. In order to make the catalogue complete, also windows should be included. The next step in this improvement is to link the floorplans with the Agent Based Model growth. When the floorplans are somehow included in the growth process, spaces will be created that can fit the floorplans and floorplans will fit the spaces. The placement of windows can than be guided as well.</p>
+<p>Next to that, we added a new preference to the program of requirements, view on greenery. We created this field by looking at the existing greenery in the surrounding. However, later in the project we added some greenery on the plot. For future projects it is recommended to find a way to incorporate the new greenery the creation of the field. </p>
+<p>Another aspect we have been experimenting with is the use of limiting the building depth. In our configuration we used a maximum building depth of 3 voxels in the x- or y-direction. The result is a Swiss cheese building, it has holes at every floor level. The goal of this behaviour was to get enough light and sun in the building. The holes which are created in the middle of the building will not let any sun through, because there are occupied voxels above the empty voxels. The behaviour should be adapted in order to take care of this problem.</p>
+<p>Lastly, we wanted to created building which was connected to the ground. Therefore we added a new behaviour which prevented the agents from floating. When we included this behaviour in the growth process, we noticed that the agents tended to go up much more than when we left this behaviour out of the process. We could not figure out what the exact reason is for this phenomenon. It might be that in the first iteration the agent above is best and the next iteration it cannot grow to the side anymore, so it will occupy the voxel above again. To adapt this behaviour in future projects, there need to be taken a good look at the logic behind this process. </p>
+<h2 id="forming">Forming</h2>
                 
               
               
