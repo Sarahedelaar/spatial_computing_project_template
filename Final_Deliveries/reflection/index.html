@@ -446,67 +446,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#planning" class="md-nav__link">
-    Planning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring" class="md-nav__link">
-    Configuring
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuring">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#voxel" class="md-nav__link">
-    Voxel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visibility-and-accesibility-reflection" class="md-nav__link">
-    Visibility and accesibility reflection
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#massing" class="md-nav__link">
-    Massing
-  </a>
-  
-    <nav class="md-nav" aria-label="Massing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forming" class="md-nav__link">
-    Forming
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -829,67 +768,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#planning" class="md-nav__link">
-    Planning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring" class="md-nav__link">
-    Configuring
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuring">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#voxel" class="md-nav__link">
-    Voxel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visibility-and-accesibility-reflection" class="md-nav__link">
-    Visibility and accesibility reflection
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#massing" class="md-nav__link">
-    Massing
-  </a>
-  
-    <nav class="md-nav" aria-label="Massing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions" class="md-nav__link">
-    Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forming" class="md-nav__link">
-    Forming
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -918,74 +796,12 @@
 <p><img alt="Reflection" src="../../img/noise_reflection.png" /></p>
 </figure>
 <figure>
-<p><img alt="Reflection" src="../../img/sun_acc_reflection.png" /></p>
+<p><img alt="Reflection" src="../../img/sun_acc_reflection.png" />
+  </p>
+<figcaption>** Residential area is marked in green in the pictures above **</figcaption>
 </figure>
 <p>Reflecting back on the generated floor plan, we can see that the separation between public and private places has been established. All the residential voxels are at the top half of the building and also at the upper levels of the building. The public spaces are at the bottom half of the building and mostly on the ground floor. In our opinion this design goals has been met. The public spaces can be seen inside of the box in the images.</p>
 <p>The final floor plan generator we have conceptualized can be considered as our most modular aspect of the building. Not only does every interior tile fit inside the voxels, they can also easily be swapped out and reorganized. This means that the function of a room can be changed with ease, without major adjustments to the shape of the building. We haven’t implemented a similar tactic for the façade, which is something which can be implemented for a project in the coming years.</p>
-<h2 id="planning">Planning</h2>
-<p>Good job on the metro network diagram.</p>
-<p>● Nice architectural framework specified as goals for the quality of spaces
-● Stereotypes of the users and inhabitants used in developing narratives and constructing
-the metro network. And then forming the adjacency matrix</p>
-<h2 id="configuring">Configuring</h2>
-<p>Configuring: the studies on the voxel size look promising but the staircases have to also
-include the standing platforms. 
-Page 29, perhaps you can put the shafts in the middle as you first create the shafts and then the corridors. 
-Showing hidden corridors in the plan tiles with a hatch, similar to page 38, and explaining the meta-level principles of the modular floor planning
-process.
-A reflection on the marked position of the windows (visibility) or doorways (accessibility) on the edges and their potential effects on the configuration rules will be appreciated (for the website especially).</p>
-<p>● 2 stencils for computing the distances, the price of the vertical movement is considered
-higher  (+)
-● How did you construct the diagrams on 17-20 slide,amazing diagrams, love the gamified
-style</p>
-<h3 id="voxel">Voxel</h3>
-<blockquote>
-<p>The final voxel is 3.6*3.6*3.24 (w*d*h) meters. With the minivoxel being 0.9*0.9*0.54 (w*d*h) meters to represent a flight of three stairs. (Fig. 3) The standing platforms between the stairs are 0.90 meters in depth, ideally this would be 1.20 meters so that two people can pass at the same time. </p>
-</blockquote>
-<p>The voxel size might need some improvement as the standing platform is 0.90 meter when it ideally would be 1.20 meter or even bigger in depth. This is based on the width that a person needs for a walkway; 0.60 meter. To later improve this there would need to be an extra minivoxel with instead of 3 steps just one and the rest of the depth as standing platform.</p>
-<h3 id="visibility-and-accesibility-reflection">Visibility and accesibility reflection</h3>
-<p>A reflection on the marked position of the windows (visibility) or doorways (accessibility) on the edges and their potential effects on the configuration rules will be appreciated (for the website especially).</p>
-<h2 id="massing">Massing</h2>
-<p>Massing: the pixelated diagrams are on a whole new level of quality! Bravo! The special
-functions deserve to be explained one by one and more elaborately (on the website). With ABM,
-the research methodology is based on the general idea of testing the usefulness or validity of
-the local behavioral patterns for achieving the desired global results. Therefore, it would be a
-good idea to mention what each function is supposed/desired to achieve globally; and then
-reflect on whether the function in question has achieved the desired results or not (and an
-analysis of its behavior or idea for future improvement). 
-Why do you get a Swiss Cheese on pages ca. 30?</p>
-<p>● S22 seed allocation based on entrance greenery and entrance distance field, agents
-start from ground,
-● Dynamic growth of agents is implemented.... Updating the availability lattice based on
-the existing voxel and growth only on top of other voxels... this explanation s23, could
-be done with pseudo code
-● Building depth is also implemented, s24, where is the pseudo code?
-● Example of building depth is missing, visualization is missing
-● Mass variants is showed, s25, great reflective process, this needs to be explained in the
-website
-● 26 amazing final growth
-● 27 visualized the evaluation function, did not explain it properly... yellow function could
-be chosen, since it moves more
-● Corridor on the ground floor connecting all of the spaces
-● 33 flowcharts of notebooks, functions and data set amazing</p>
-<h3 id="functions">Functions</h3>
-<p>It would be a good idea to mention what each function is supposed/desired to achieve globally; and then
-reflect on whether the function in question has achieved the desired results or not (and an analysis of its behavior or idea for future improvement). </p>
-<h2 id="forming">Forming</h2>
-<p>Forming: The forming phase is well structured but the connection with the early studies on the
-sizing of the voxels can be made more explicit. The idea is that the voxel sizes should be
-informed by the forming process. On page 38, why do you mention a ‘random’ configuration?
-The idea is that your rules define a grammatical system and then you play by the book
-containing these grammatical rules. The results may not be necessarily meaningful but they can
-still be ‘grammatically’ valid. Page 43 shows that it could be a good looking building. Please do
-not hesitate from showing the potential look of the building, even if necessary by applying your
-facade modules by hand, but of course systematically, according to your own rulebook.</p>
-<p>● 35 great flowchart describing the process of automatic plan generation, even if the plans
-are not coming out completely, this is a great framework to start from, 35: can you
-explain again the connection of the plan tiles? How you take that into consideration
-● 37 great to show cse the examples
-● 38, formulated as a game, with a scenario. This is perfect, even if the implementation is
-not complete</p>
                 
               
               
