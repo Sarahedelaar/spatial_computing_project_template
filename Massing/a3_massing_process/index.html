@@ -405,6 +405,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#both-off" class="md-nav__link">
+    Both off:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-float-function" class="md-nav__link">
+    No float function:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#both-on" class="md-nav__link">
+    Both on:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-depth" class="md-nav__link">
+    Building depth:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gif-growth-example" class="md-nav__link">
     GIF growth example
   </a>
@@ -779,68 +807,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Documenting (TBR)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon"></span>
-        Documenting (TBR)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/instructions/" class="md-nav__link">
-      Instructions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/folder_structure/" class="md-nav__link">
-      Folder Structure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/guidelines/" class="md-nav__link">
-      Guidelines
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -937,6 +903,34 @@
           <li class="md-nav__item">
   <a href="#behaviours-and-expectations" class="md-nav__link">
     Behaviours and expectations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#both-off" class="md-nav__link">
+    Both off:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-float-function" class="md-nav__link">
+    No float function:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#both-on" class="md-nav__link">
+    Both on:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-depth" class="md-nav__link">
+    Building depth:
   </a>
   
 </li>
@@ -1216,31 +1210,31 @@ The second simulation uses a maximum building depth of 6 voxels. In this example
 <p>Before choosing the final mass, we experimented with the use of different combinations of behaviours. We ran the simulation multiple times to see the effect of some specific behaviours, especially the function which prevents floating parts and the function on limiting the building depth. The results are shown below and evaluated.</p>
 </blockquote>
 <h3 id="behaviours-and-expectations">Behaviours and expectations</h3>
-<p>Both off:
-The first configuration is the result of the simulation with both functions turned off. This configuration consists out of one big mass with for a big part a horizontal roof. This makes it difficult for the sun to penetrate the middle of the building. One of the design principles was to create a good living condition with as much light as possible. This configuration does not meet this criteria. </p>
+<h3 id="both-off">Both off:</h3>
+<p>The first configuration is the result of the simulation with both functions turned off. This configuration consists out of one big mass with for a big part a horizontal roof. This makes it difficult for the sun to penetrate the middle of the building. One of the design principles was to create a good living condition with as much light as possible. This configuration does not meet this criteria. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_off.png" />
   </p>
 <figcaption>Mass variant, both functions off</figcaption>
 </figure>
-<p>No float function:
-In the second configuration the behaviour which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours, as it is outside the solar envelope, and is therefore not an option.
+<h3 id="no-float-function">No float function:</h3>
+<p>In the second configuration the behaviour which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours, as it is outside the solar envelope, and is therefore not an option.
 To prevent getting a big wall as configuration, there needs to be experimented with extra fields which will push some of the agents to the other side of the plot. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_no_float.png" />
   </p>
 <figcaption>Mass variant, float function on</figcaption>
 </figure>
-<p>Both on:
-The third time we ran the simulation with both behaviours on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact than the limitation of the building depth. 
+<h3 id="both-on">Both on:</h3>
+<p>The third time we ran the simulation with both behaviours on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact than the limitation of the building depth. 
 As with the previous configuration is this mass too high, so it will cast too much shadow, as the building is outside the solar envelope, and is therefore not a fit for our project.</p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_on.png" />
   </p>
 <figcaption>Mass variant, both functions on</figcaption>
 </figure>
-<p>Building depth:
-For the last configuration, only the limitation of the building depth is used. We choose a maximum building depth of 3 voxels, because then the building depth will become at most about 10 metres. When there are windows on both sides, most part of the building will be able to get sunlight. 
+<h3 id="building-depth">Building depth:</h3>
+<p>For the last configuration, only the limitation of the building depth is used. We choose a maximum building depth of 3 voxels, because then the building depth will become at most about 10 metres. When there are windows on both sides, most part of the building will be able to get sunlight. 
 The result is a configuration which looks like the first configuration, but with a lot more height differences in the roof and walls. Therefore the sun can penetrate the building at more places. Next to that, the building does not cast too much shadow on the surrounding. To conclude, this configuration fits our design goals best and will therefore be our final mass. </p>
 <p>However, this configuration can be improved in later projects. At this moment, the building depth behaviour does not take into account that there can be an agent above an empty voxel. The effect is that there are holes in the middle of the building where still the sun cannot get. To create a building which will at all places receive as much sun as possible, the building depth behaviour needs to be adapted. </p>
 <figure>
@@ -1347,6 +1341,7 @@ The result is a configuration which looks like the first configuration, but with
 </tr>
 </tbody>
 </table>
+<p>Table of the values per agent from the student house growth</p>
 <h3 id="centers-of-clusters"><strong> Centers of clusters</strong></h3>
 <blockquote>
 <p>To be able to compute the shafts and corridors throughout the building, we first need to calculate the average voxel of each agent. This is done by calculating the centre of each cluster.</p>

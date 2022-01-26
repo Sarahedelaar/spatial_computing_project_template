@@ -314,8 +314,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#distance-to-ground" class="md-nav__link">
-    Distance to ground
+  <a href="#distance-to-the-ground" class="md-nav__link">
+    Distance to the ground
   </a>
   
 </li>
@@ -752,68 +752,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Documenting (TBR)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon"></span>
-        Documenting (TBR)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/instructions/" class="md-nav__link">
-      Instructions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/folder_structure/" class="md-nav__link">
-      Folder Structure
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../documenting/guidelines/" class="md-nav__link">
-      Guidelines
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -874,8 +812,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#distance-to-ground" class="md-nav__link">
-    Distance to ground
+  <a href="#distance-to-the-ground" class="md-nav__link">
+    Distance to the ground
   </a>
   
 </li>
@@ -940,7 +878,7 @@
 </blockquote>
 <h3 id="voxel-size"><strong>Voxel size</strong></h3>
 <blockquote>
-<p>To define an appropriate voxel size, we used the size of 1 flight of stairs. We defined the size by the use of stairs to create an upward route within the boundaries of a voxel. The dimensions of the stairs size are approximated according to the books ‘’De Menselijke maat’’ and ‘’Het Bouwbesluit’’. These books create a couple requirements the stairs need to fit.</p>
+<p>To define an appropriate voxel size, we used the size of 1 flight of stairs. We defined the size by the use of stairs to create an upward route within the boundaries of a voxel. The dimensions of the stairs size are approximated according to the books ‘’De Menselijke maat’’ (Haak &amp; Leever-Burgh, 1980) and ‘’Het Bouwbesluit’’ (Overveld et al, 2011). These books create a couple requirements the stairs need to fit.</p>
 </blockquote>
 <ul>
 <li>
@@ -964,7 +902,7 @@
 <figure>
 <p><img align="left" alt="Voxelsize" src="../../img/voxelsize.jpg" />
   </p>
-<figcaption>Fig. 1 Voxelsize</figcaption>
+<figcaption>Fig. 1 Voxel size</figcaption>
 </figure>
 <h3 id="voxelized-envelope-low-res"><strong>Voxelized envelope low res</strong></h3>
 <blockquote>
@@ -1000,14 +938,14 @@
 </figure>
 <iframe src="https://drive.google.com/file/d/1PVmR0BFf2cq39tiwaLSTBNVs9zbdrE2Z/preview" width="900px" height="300px"></iframe>
 
-<h3 id="distance-to-ground">Distance to ground</h3>
+<h3 id="distance-to-the-ground">Distance to the ground</h3>
 <blockquote>
-<p>This analysis works in a similar way as the distance to the main entrance. This time every voxel calculates the distance between itself and the ground floor. To compute this field only one neighbourhood stencil is needed, because only the vertical movement is incorporated. The distance to the ground field is created to be able to specify how close a certain space want to be to ground level. The result is a distance to the ground field in which 1 is the closest to ground level and 0 the furthest.</p>
+<p>This analysis works in a similar way as the distance to the main entrance. This time every voxel calculates the distance between itself and the ground floor. To compute this field only one neighbourhood stencil is needed, because only the vertical movement is incorporated. The distance to the ground field is created to be able to specify how close a certain space wants to be to ground level. The result is a distance to the ground field in which 1 is the closest to ground level and 0 the furthest.</p>
 </blockquote>
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Ground.png" />
   </p>
-<figcaption>Distance to Ground</figcaption>
+<figcaption>Distance to the Ground</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1gn6IroC8c-d6_po1XDo_2UbU96fRxZtC/preview" width="900px" height="300px"></iframe>
 
@@ -1038,7 +976,7 @@
 <p>Calculating the shadows is an addition to the previous analysis. Sun rays are computed in an inverted direction to see where they hit the context. When there is a hit, this means the envelope will cast shadow on the surrounding. The result is a solar envelope in which we the parts which block the most sun are cut away. After the agent growth we can check is the building will not cast too much shadow by comparing the configuration with the solar envelope.</p>
 </blockquote>
 <figure>
-<p><img alt="Shadow cast" src="../../img/Shadow%20cast.png" />
+<p><img alt="Shadow cast" src="../../img/Shadow_cast_sun.png" />
   </p>
 <figcaption>Shadow casting</figcaption>
 </figure>
@@ -1057,7 +995,7 @@
 
 <h3 id="view-on-greenery">View on greenery</h3>
 <blockquote>
-<p>The last aspect of a good living condition was a good view on greenery, therefore we created a view on greenery field. This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam. These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery. The result only includes the current greenery in the surrounding, in which 1 means the most view on greenery and 0 the least. However, to improve this analysis in future projects, the greenery, which will eventually be included in the plot, also needs to be taken into account. </p>
+<p>The last aspect of a good living condition was a good view on greenery, therefore we created a view on greenery field. This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam (Stadsbeheer Rotterdam, 2016). These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery. The result only includes the current greenery in the surrounding, in which 1 means the most view on greenery and 0 the least. However, to improve this analysis in future projects, the greenery, which will eventually be included in the plot, also needs to be taken into account. </p>
 </blockquote>
 <figure>
 <p><img alt="Greenery" src="../../img/greenery.png" />
