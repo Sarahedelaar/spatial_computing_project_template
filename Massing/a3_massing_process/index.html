@@ -328,33 +328,53 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#evaluate-voxel" class="md-nav__link">
-    Evaluate voxel
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-voxels" class="md-nav__link">
+    Evaluate voxels
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seed-allocation" class="md-nav__link">
     Seed allocation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-value" class="md-nav__link">
     Change value
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#special-behaviours" class="md-nav__link">
+    Special behaviours
+  </a>
+  
+    <nav class="md-nav" aria-label="Special behaviours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#squareness" class="md-nav__link">
     Squareness
   </a>
   
-    <nav class="md-nav" aria-label="Squareness">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#prevent-floating-agents" class="md-nav__link">
@@ -364,8 +384,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitting-building-depth" class="md-nav__link">
-    Limitting building depth
+  <a href="#limiting-building-depth" class="md-nav__link">
+    Limiting building depth
   </a>
   
 </li>
@@ -378,8 +398,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions-and-expectations" class="md-nav__link">
-    Functions and expectations
+  <a href="#behaviours-and-expectations" class="md-nav__link">
+    Behaviours and expectations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gif-growth-example" class="md-nav__link">
+    GIF growth example
   </a>
   
 </li>
@@ -401,13 +428,6 @@
           <li class="md-nav__item">
   <a href="#paths" class="md-nav__link">
     Paths
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gif-growth-example" class="md-nav__link">
-    GIF growth example
   </a>
   
 </li>
@@ -845,33 +865,53 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#evaluate-voxel" class="md-nav__link">
-    Evaluate voxel
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-voxels" class="md-nav__link">
+    Evaluate voxels
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#seed-allocation" class="md-nav__link">
     Seed allocation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#change-value" class="md-nav__link">
     Change value
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#special-behaviours" class="md-nav__link">
+    Special behaviours
+  </a>
+  
+    <nav class="md-nav" aria-label="Special behaviours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#squareness" class="md-nav__link">
     Squareness
   </a>
   
-    <nav class="md-nav" aria-label="Squareness">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#prevent-floating-agents" class="md-nav__link">
@@ -881,8 +921,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitting-building-depth" class="md-nav__link">
-    Limitting building depth
+  <a href="#limiting-building-depth" class="md-nav__link">
+    Limiting building depth
   </a>
   
 </li>
@@ -895,8 +935,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions-and-expectations" class="md-nav__link">
-    Functions and expectations
+  <a href="#behaviours-and-expectations" class="md-nav__link">
+    Behaviours and expectations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gif-growth-example" class="md-nav__link">
+    GIF growth example
   </a>
   
 </li>
@@ -922,13 +969,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#gif-growth-example" class="md-nav__link">
-    GIF growth example
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -949,9 +989,13 @@
                 
                 <h1 id="massing-process"><strong>Massing: process</strong></h1>
 <hr />
-<h3 id="evaluate-voxel">Evaluate voxel</h3>
+<h2 id="introduction"><strong> Introduction </strong></h2>
 <blockquote>
-<p>Before the process of growing the voxels can start, we need a way to evaluate all the voxels in order to know where every agent wants to grow. That is the purpose of this function. The fields, created in the configuring part, will be combined with the information from the program of requirements. For the to be evaluated voxels the original value from a particular field will be raised by the preference to get the new value. The value of each voxel will be different for every agent and different for each iteration.</p>
+<p>In this section the growth of the ABM (agent based model) will be discussed. There are several special behaviours which were created to guide the growth and to get a configuration which matches the design goals best. For every behaviour a function is created, tested and evaluated. In the end different configurations will be discussed with respect to the design goals, they all use a different combination of behaviours. </p>
+</blockquote>
+<h3 id="evaluate-voxels"><strong>Evaluate voxels</strong></h3>
+<blockquote>
+<p>Before the process of growing the voxels can start, we need a way to evaluate all the voxels in order to know where every agent wants to grow. That is the purpose of this function. The fields, created in the configuring part, will be combined with the preferences  from the program of requirements. For the to be evaluated voxels the original value from a particular field will be raised by the preference to get the new value. The value of each voxel will be different for every agent and different for each iteration.</p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Evaluate" src="../../img/evaluate_voxel.png" />
@@ -982,7 +1026,7 @@
 </td></tr></table></p>
 <h3 id="seed-allocation"><strong>Seed allocation</strong></h3>
 <blockquote>
-<p>We started the massing part with the initializing the agents. For that we used the function to evaluate voxels. At first the agents are placed at the spot where they feel most comfortable, see the first image. Furthermore, we added another feature to the initialization part. When the agents are at the place with the highest values, they are moved down to ground level, which can be seen in the second image. This is done to discourage too many floating agents later in the process.</p>
+<p>We started the massing part by initializing the agents. We used the function to evaluate voxels. At first the agents are placed at the spot where they feel most comfortable, see the first image. Furthermore, we added another feature to the initialization part. When the agents are at the place with the highest values, they are moved down to ground level, which can be seen in the second image. This is done to discourage too many floating agents later in the process.</p>
 </blockquote>
 <figure>
 <p><img align="left" alt="Initialization" src="../../img/init_agents_original.png" />
@@ -1008,25 +1052,25 @@
 <span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Input</span><span class="p">:</span> <span class="n">voxelized_envelope</span><span class="o">.</span><span class="n">csv</span> <span class="p">(</span><span class="n">high</span> <span class="n">res</span><span class="p">),</span> <span class="n">fields</span><span class="p">,</span> <span class="n">program</span> <span class="n">of</span> <span class="n">requirement</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Initialize</span> <span class="n">the</span> <span class="n">empty</span> <span class="n">occupation</span> <span class="n">lattice</span> <span class="p">(</span><span class="n">full</span> <span class="n">of</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">For</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">ids</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">preferences</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">For</span> <span class="n">every</span> <span class="n">agent</span> <span class="nb">id</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">agent</span> <span class="n">preferences</span><span class="p">:</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="n">Create</span> <span class="n">a</span> <span class="n">preference</span> <span class="n">lattice</span> <span class="k">for</span> <span class="n">every</span> <span class="n">agent</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="n">Raise</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">every</span> <span class="n">field</span> <span class="n">by</span> <span class="n">the</span> <span class="n">weight</span> <span class="n">given</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">program</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>  <span class="n">Select</span> <span class="n">the</span> <span class="n">voxel</span> <span class="k">with</span> <span class="n">the</span> <span class="n">highest</span> <span class="n">value</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a>  <span class="n">Move</span> <span class="n">the</span> <span class="n">voxel</span> <span class="n">to</span> <span class="n">ground</span> <span class="n">level</span><span class="p">,</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">floating</span> <span class="n">parts</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="n">Change</span> <span class="n">the</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">occupation</span> <span class="ow">and</span> <span class="n">availability</span> <span class="n">lattice</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">Initialized</span> <span class="n">agents</span> <span class="p">(</span><span class="n">occupation</span> <span class="n">lattice</span> <span class="ow">and</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table></p>
-<h3 id="change-value">Change value</h3>
+<h3 id="change-value"><strong> Change value</strong></h3>
+<blockquote>
+<p>This function is created to occupy voxels or to leave voxels. In the beginning the agents will eat voxels. When the maximum amount of voxels is reached, the values of the neighbours is are compared with the internal voxels. When the neighbour has a value which is 10% higher than the internal voxel, one will be let go and the other one will be occupied. This all happens within the same function. </p>
+</blockquote>
 <figure>
 <p><img align="left" alt="Change" src="../../img/change_value.png" />
   </p>
 <figcaption>Change value</figcaption>
 </figure>
-<blockquote>
-<p>This function is created to occupy voxels or leave voxels. In the beginning the agents will eat voxels. When the maximum amount of voxels is reached, the value of the neighbours is compared with the internal voxels. When the neighbour has a value which is 10% higher than the internal voxel, one will be let go and the other one will be occupied. This all happens within the same function. </p>
-</blockquote>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Change_value.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1051,7 +1095,8 @@
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">occupation</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">agents</span> <span class="n">location</span> <span class="nb">list</span>
 </code></pre></div>
 </td></tr></table></p>
-<h2 id="squareness">Squareness</h2>
+<h2 id="special-behaviours"><strong> Special behaviours</strong></h2>
+<h3 id="squareness"><strong> Squareness</strong></h3>
 <blockquote>
 <p>Squareness is a behaviour we created to encourage the agents to grow in rectangular shapes to create usable spaces. When a neighbour exists for multiple voxels it will increase the squareness and therefore its value will be raised.</p>
 </blockquote>
@@ -1126,7 +1171,7 @@ The behaviour works the way it was supposed to work, so there are no recommendat
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
 </code></pre></div>
 </td></tr></table></p>
-<h3 id="limitting-building-depth">Limitting building depth</h3>
+<h3 id="limiting-building-depth">Limiting building depth</h3>
 <blockquote>
 <p>This behaviour limits the building depth in the horizontal directions. This is done to get as much light in the building as possible and thereby achieve one of the design principles, creating good living conditions. The skylight and sunlight hits the building at an angle and therefore it cannot reach too far in a space.</p>
 </blockquote>
@@ -1138,14 +1183,14 @@ The behaviour works the way it was supposed to work, so there are no recommendat
 <p>In the two gifs beneath, you can see how this behaviour works on the growth of the agents. For the first simulation a maximum building depth of 3 voxels is used. It can be seen that there are never more than 3 voxels next to each other in the x- or y-direction.
 The second simulation uses a maximum building depth of 6 voxels. In this example you can clearly see the effect of this behaviour. The yellow agent wants to grow towards the purple agent, but it cannot grow in one straight line, because then it will exceed the building depth. Therefore it grows to the side at some places.</p>
 <figure>
+<p><img alt="GIF" src="../../img/gif_building_depth.gif" />
+  </p>
+<figcaption>Gif of the building depth (3)</figcaption>
+</figure>
+<figure>
 <p><img alt="GIF" src="../../img/gif_building_depth_6.gif" />
   </p>
 <figcaption>Gif of the building depth (6)</figcaption>
-</figure>
-<figure>
-<p><img alt="GIF" src="../../img/gif_building_depth.gif" />
-  </p>
-<figcaption>Gif of the building depth</figcaption>
 </figure>
 <p>This behaviour can be optimized in future projects. At this moment the function looks at the x- and y-direction separately. However, when you look at the second example, one row of voxels of more than 6 voxels would not be a problem for the sun access. It becomes a problem when the maximum building depth is reached in both directions, this should be taken into account when improving this behaviour.</p>
 <p><strong> Pseudo code</strong>
@@ -1166,21 +1211,20 @@ The second simulation uses a maximum building depth of 6 voxels. In this example
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">new</span> <span class="n">availability</span> <span class="n">lattice</span>
 </code></pre></div>
 </td></tr></table></p>
-<h3 id="final-mass">Final mass</h3>
+<h3 id="final-mass"><strong> Final mass</strong></h3>
 <blockquote>
-<p>Before choosing a final mass there were four options as we had two functions to choose out off. Below are the results of both functions off, float function off, both functions on and finally the final mass that has only the building depth function on and the no float function off.</p>
+<p>Before choosing the final mass, we experimented with the use of different combinations of behaviours. We ran the simulation multiple times to see the effect of some specific behaviours, especially the function which prevents floating parts and the function on limiting the building depth. The results are shown below and evaluated.</p>
 </blockquote>
-<h3 id="functions-and-expectations">Functions and expectations</h3>
+<h3 id="behaviours-and-expectations">Behaviours and expectations</h3>
 <p>Both off:
-We ran the simulation multiple times to see the effect of some specific functions, especially the function which prevents floating parts and the function on limiting the building depth. 
-The first configuration is the result of simulation with both functions turned off. This configuration consists out of one big mass with for a big part a horizontal roof. This makes it difficult for the sun to penetrate the middle of the building. One of the design principles was to create a good living condition with as much light as possible. This configuration does not meet this criteria. </p>
+The first configuration is the result of the simulation with both functions turned off. This configuration consists out of one big mass with for a big part a horizontal roof. This makes it difficult for the sun to penetrate the middle of the building. One of the design principles was to create a good living condition with as much light as possible. This configuration does not meet this criteria. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_off.png" />
   </p>
 <figcaption>Mass variant, both functions off</figcaption>
 </figure>
 <p>No float function:
-In the second configuration the function which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours and is therefore not an option.
+In the second configuration the behaviour which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours, as it is outside the solar envelope, and is therefore not an option.
 To prevent getting a big wall as configuration, there needs to be experimented with extra fields which will push some of the agents to the other side of the plot. </p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_no_float.png" />
@@ -1188,8 +1232,8 @@ To prevent getting a big wall as configuration, there needs to be experimented w
 <figcaption>Mass variant, float function on</figcaption>
 </figure>
 <p>Both on:
-The third time we ran the simulation with both functions on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact on the shape than the limitation of the building depth. 
-As with the previous configuration is this mass too high, so it will cast too much shadow and is therefore not a fit for our project.</p>
+The third time we ran the simulation with both behaviours on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact than the limitation of the building depth. 
+As with the previous configuration is this mass too high, so it will cast too much shadow, as the building is outside the solar envelope, and is therefore not a fit for our project.</p>
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_on.png" />
   </p>
@@ -1198,12 +1242,115 @@ As with the previous configuration is this mass too high, so it will cast too mu
 <p>Building depth:
 For the last configuration, only the limitation of the building depth is used. We choose a maximum building depth of 3 voxels, because then the building depth will become at most about 10 metres. When there are windows on both sides, most part of the building will be able to get sunlight. 
 The result is a configuration which looks like the first configuration, but with a lot more height differences in the roof and walls. Therefore the sun can penetrate the building at more places. Next to that, the building does not cast too much shadow on the surrounding. To conclude, this configuration fits our design goals best and will therefore be our final mass. </p>
+<p>However, this configuration can be improved in later projects. At this moment, the building depth behaviour does not take into account that there can be an agent above an empty voxel. The effect is that there are holes in the middle of the building where still the sun cannot get. To create a building which will at all places receive as much sun as possible, the building depth behaviour needs to be adapted. </p>
 <figure>
 <p><img align="left" alt="Final mass" src="../../img/massing.png" />
   </p>
 <figcaption>Final mass, float off, depth on</figcaption>
 </figure>
-<h3 id="centers-of-clusters">Centers of clusters</h3>
+<h3 id="gif-growth-example">GIF growth example</h3>
+<blockquote>
+<p>The gif below shows an example of the development of the field, which means where the agent wants to grow. The student house is chosen for this example. At the initialisation stage, the agent only looks at the external preferences, such as sun access and distance to the entrance. At this point the agent wants to be at the right of the envelope. When the agent starts to grow, it will also take the connection between other agents into consideration. It slowly wants to grow more towards the middle. This analysis gives an insight in the way the agents want to behave. </p>
+</blockquote>
+<figure>
+<p><img align="left" alt="Growth" src="../../img/student_house_growth.gif" />
+  </p>
+<figcaption>Student house growth</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Space ID</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voxel amount</td>
+<td>185</td>
+</tr>
+<tr>
+<td>Sun Acc.</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Ground</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Greenery</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Noise</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Sky View</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>Ground</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Greenery</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>Entrance acc.</td>
+<td>0</td>
+</tr>
+<tr>
+<td>-----------</td>
+<td>-----------</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>-----------</td>
+<td>-----------</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0  .25</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="centers-of-clusters"><strong> Centers of clusters</strong></h3>
+<blockquote>
+<p>To be able to compute the shafts and corridors throughout the building, we first need to calculate the average voxel of each agent. This is done by calculating the centre of each cluster.</p>
+</blockquote>
 <figure>
 <p><img align="left" alt="Clusters" src="../../img/cluster_centers_background.png" />
   </p>
@@ -1223,7 +1370,10 @@ The result is a configuration which looks like the first configuration, but with
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">cluster</span> <span class="n">centers</span>
 </code></pre></div>
 </td></tr></table></p>
-<h3 id="shafts">Shafts</h3>
+<h3 id="shafts"><strong> Shafts</strong></h3>
+<blockquote>
+<p>The shafts will be placed at the most central places of the building. Therefore the centres of the clusters are used to find the four most central places, these are the places for the shafts.</p>
+</blockquote>
 <figure>
 <p><img align="left" alt="Shafts" src="../../img/shafts_background.png" />
   </p>
@@ -1243,7 +1393,10 @@ The result is a configuration which looks like the first configuration, but with
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">Output</span><span class="p">:</span> <span class="n">shafts</span>
 </code></pre></div>
 </td></tr></table></p>
-<h3 id="paths">Paths</h3>
+<h3 id="paths"><strong> Paths</strong></h3>
+<blockquote>
+<p>The corridors will create paths between the different spaces and the shafts and eventually will form the connection with the entrance. To lose the least space on corridors, the shortest path is found between the space and one of the shafts. On ground level the shafts are connected to the main entrance, so the visitors will be able to get to the entrance. </p>
+</blockquote>
 <figure>
 <p><img align="left" alt="Paths" src="../../img/paths_background.png" />
   </p>
@@ -1266,17 +1419,7 @@ The result is a configuration which looks like the first configuration, but with
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a>
 <a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">Output</span><span class="p">:</span> <span class="n">corridors</span>
 </code></pre></div>
-</td></tr></table>
-</br></p>
-<h3 id="gif-growth-example">GIF growth example</h3>
-<blockquote>
-<p>An example of the growth of the fields, shown below is the student house.</p>
-</blockquote>
-<figure>
-<p><img align="left" alt="Growth" src="../../img/student_house_growth.gif" />
-  </p>
-<figcaption>Student house growth</figcaption>
-</figure>
+</td></tr></table></p>
                 
               
               
