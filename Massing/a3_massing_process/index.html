@@ -994,7 +994,7 @@
 <figure>
 <p><img align="left" alt="Evaluate" src="../../img/evaluate_voxel.png" />
   </p>
-<figcaption>Evaluate voxel</figcaption>
+<figcaption>Fig. 47 Evaluate voxel</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Evaluate_voxels.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1025,12 +1025,12 @@
 <figure>
 <p><img align="left" alt="Initialization" src="../../img/init_agents_original.png" />
   </p>
-<figcaption>Original initialization of the agents</figcaption>
+<figcaption>Fig. 48 Original initialization of the agents</figcaption>
 </figure>
 <figure>
 <p><img align="left" alt="Initialization" src="../../img/agents_init.png" />
   </p>
-<figcaption>Improved initialization of the agents</figcaption>
+<figcaption>Fig. 49 Improved initialization of the agents</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Initialization_agents.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -1063,7 +1063,7 @@
 <figure>
 <p><img align="left" alt="Change" src="../../img/change_value.png" />
   </p>
-<figcaption>Change value</figcaption>
+<figcaption>Fig. 50 Change value</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Change_value.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1099,12 +1099,12 @@ The behaviour works the way it was supposed to work, so there are no recommendat
 <figure>
 <p><img alt="GIF" src="../../img/gif_squareness.gif" />
   </p>
-<figcaption>Gif of the squareness</figcaption>
+<figcaption>Fig. 51 Gif of the squareness</figcaption>
 </figure>
 <figure>
 <p><img align="left" alt="Squareness" src="../../img/squareness.png" />
   </p>
-<figcaption>Squareness</figcaption>
+<figcaption>Fig. 52 Squareness</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Squareness.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1138,12 +1138,12 @@ The behaviour works the way it was supposed to work, so there are no recommendat
 <figure>
 <p><img align="left" alt="Update" src="../../img/gif_no_float.gif" />
   </p>
-<figcaption>GIF Prevent floating agents</figcaption>
+<figcaption>Fig. 53 GIF Prevent floating agents</figcaption>
 </figure>
 <figure>
 <p><img align="left" alt="Update" src="../../img/update.png" />
   </p>
-<figcaption>Prevent floating agents</figcaption>
+<figcaption>Fig. 54 Prevent floating agents</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Prevent_floating.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
@@ -1172,19 +1172,19 @@ The behaviour works the way it was supposed to work, so there are no recommendat
 <figure>
 <p><img align="left" alt="Depth" src="../../img/building_depth.png" />
   </p>
-<figcaption>Building depth</figcaption>
+<figcaption>Fig. 55 Building depth</figcaption>
 </figure>
 <p>In the two gifs beneath, you can see how this behaviour works on the growth of the agents. For the first simulation a maximum building depth of 3 voxels is used. It can be seen that there are never more than 3 voxels next to each other in the x- or y-direction.
 The second simulation uses a maximum building depth of 6 voxels. In this example you can clearly see the effect of this behaviour. The yellow agent wants to grow towards the purple agent, but it cannot grow in one straight line, because then it will exceed the building depth. Therefore it grows to the side at some places.</p>
 <figure>
 <p><img alt="GIF" src="../../img/gif_building_depth.gif" />
   </p>
-<figcaption>Gif of the building depth (3)</figcaption>
+<figcaption>Fig. 56 Gif of the building depth (3)</figcaption>
 </figure>
 <figure>
 <p><img alt="GIF" src="../../img/gif_building_depth_6.gif" />
   </p>
-<figcaption>Gif of the building depth (6)</figcaption>
+<figcaption>Fig. 57 Gif of the building depth (6)</figcaption>
 </figure>
 <p>This behaviour can be optimized in future projects. At this moment the function looks at the x- and y-direction separately. However, when you look at the second example, one row of voxels of more than 6 voxels would not be a problem for the sun access. It becomes a problem when the maximum building depth is reached in both directions, this should be taken into account when improving this behaviour.</p>
 <p><strong> Pseudo code</strong>
@@ -1215,7 +1215,7 @@ The second simulation uses a maximum building depth of 6 voxels. In this example
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_off.png" />
   </p>
-<figcaption>Mass variant, both functions off</figcaption>
+<figcaption>Fig. 58 Mass variant, both functions off</figcaption>
 </figure>
 <h3 id="no-float-function">No float function:</h3>
 <p>In the second configuration the behaviour which prevents floating agents is turned on. This function has the effect that all the agents want to go up and therefor it creates a massive wall of about 44 metres high. The building will cast too much shadow on the neighbours, as it is outside the solar envelope, and is therefore not an option.
@@ -1223,7 +1223,7 @@ To prevent getting a big wall as configuration, there needs to be experimented w
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_no_float.png" />
   </p>
-<figcaption>Mass variant, float function on</figcaption>
+<figcaption>Fig. 59 Mass variant, float function on</figcaption>
 </figure>
 <h3 id="both-on">Both on:</h3>
 <p>The third time we ran the simulation with both behaviours on. The third configuration is similar to the second configuration. The difference is that there are some holes in the wall, because of the maximum building depth of 3 voxels. However, for the overall shape, the behaviour of preventing floating parts has more impact than the limitation of the building depth. 
@@ -1231,7 +1231,7 @@ As with the previous configuration is this mass too high, so it will cast too mu
 <figure>
 <p><img align="left" alt="Mass options" src="../../img/mass_both_on.png" />
   </p>
-<figcaption>Mass variant, both functions on</figcaption>
+<figcaption>Fig. 60 Mass variant, both functions on</figcaption>
 </figure>
 <h3 id="building-depth">Building depth:</h3>
 <p>For the last configuration, only the limitation of the building depth is used. We choose a maximum building depth of 3 voxels, because then the building depth will become at most about 10 metres. When there are windows on both sides, most part of the building will be able to get sunlight. 
@@ -1240,7 +1240,7 @@ The result is a configuration which looks like the first configuration, but with
 <figure>
 <p><img align="left" alt="Final mass" src="../../img/massing.png" />
   </p>
-<figcaption>Final mass, float off, depth on</figcaption>
+<figcaption>Fig. 61 Final mass, float off, depth on</figcaption>
 </figure>
 <h3 id="gif-growth-example">GIF growth example</h3>
 <blockquote>
@@ -1249,99 +1249,8 @@ The result is a configuration which looks like the first configuration, but with
 <figure>
 <p><img align="left" alt="Growth" src="../../img/student_house_growth.gif" />
   </p>
-<figcaption>Student house growth</figcaption>
+<figcaption>Fig. 62 Student house growth</figcaption>
 </figure>
-<table>
-<thead>
-<tr>
-<th>Space ID</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Voxel amount</td>
-<td>185</td>
-</tr>
-<tr>
-<td>Sun Acc.</td>
-<td>0.7</td>
-</tr>
-<tr>
-<td>Ground</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Greenery</td>
-<td>0.6</td>
-</tr>
-<tr>
-<td>Noise</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Sky View</td>
-<td>0.7</td>
-</tr>
-<tr>
-<td>Ground</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Greenery</td>
-<td>0.6</td>
-</tr>
-<tr>
-<td>Entrance acc.</td>
-<td>0</td>
-</tr>
-<tr>
-<td>-----------</td>
-<td>-----------</td>
-</tr>
-<tr>
-<td>ID</td>
-<td>Value</td>
-</tr>
-<tr>
-<td>-----------</td>
-<td>-----------</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0.5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>0.25</td>
-</tr>
-<tr>
-<td>3</td>
-<td>0.</td>
-</tr>
-<tr>
-<td>4</td>
-<td>0  .25</td>
-</tr>
-<tr>
-<td>5</td>
-<td>0</td>
-</tr>
-<tr>
-<td>6</td>
-<td>0</td>
-</tr>
-<tr>
-<td>7</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>Table of the values per agent from the student house growth</p>
 <h3 id="centers-of-clusters"><strong> Centers of clusters</strong></h3>
 <blockquote>
 <p>To be able to compute the shafts and corridors throughout the building, we first need to calculate the average voxel of each agent. This is done by calculating the centre of each cluster.</p>
@@ -1349,7 +1258,7 @@ The result is a configuration which looks like the first configuration, but with
 <figure>
 <p><img align="left" alt="Clusters" src="../../img/cluster_centers_background.png" />
   </p>
-<figcaption>Centers of clusters</figcaption>
+<figcaption>Fig. 63 Centers of clusters</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Cluster_centers.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -1372,7 +1281,7 @@ The result is a configuration which looks like the first configuration, but with
 <figure>
 <p><img align="left" alt="Shafts" src="../../img/shafts_background.png" />
   </p>
-<figcaption>Shafts</figcaption>
+<figcaption>Fig. 64 Shafts</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Shaft_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -1395,7 +1304,7 @@ The result is a configuration which looks like the first configuration, but with
 <figure>
 <p><img align="left" alt="Paths" src="../../img/paths_background.png" />
   </p>
-<figcaption>Paths</figcaption>
+<figcaption>Fig. 65 Paths</figcaption>
 </figure>
 <p><strong> Pseudo code</strong>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Corridor_forming.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>

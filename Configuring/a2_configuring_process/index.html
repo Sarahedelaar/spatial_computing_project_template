@@ -902,7 +902,7 @@
 <figure>
 <p><img align="left" alt="Voxelsize" src="../../img/voxelsize.jpg" />
   </p>
-<figcaption>Fig. 1 Voxel size</figcaption>
+<figcaption>Fig. 21 Voxel size</figcaption>
 </figure>
 <h3 id="voxelized-envelope-low-res"><strong>Voxelized envelope low res</strong></h3>
 <blockquote>
@@ -911,7 +911,7 @@
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/lowres_lattice.png" />
   </p>
-<figcaption>Fig. 2 Voxelized envelope lowres</figcaption>
+<figcaption>Fig. 22 Voxelized envelope lowres</figcaption>
 </figure>
 <h3 id="voxelized-envelope-high-res"><strong>Voxelized envelope high res</strong></h3>
 <blockquote>
@@ -920,7 +920,7 @@
 <figure>
 <p><img align="left" alt="Envelope" src="../../img/highres_lattice.png" />
   </p>
-<figcaption>Fig. 3 Voxelized envelope highres</figcaption>
+<figcaption>Fig. 23 Voxelized envelope highres</figcaption>
 </figure>
 <h3 id="main-entrance">Main entrance</h3>
 <blockquote>
@@ -929,15 +929,15 @@
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Entrance.png" />
   </p>
-<figcaption>Distance to Ground</figcaption>
+<figcaption>Fig. 24 Distance to Ground</figcaption>
 </figure>
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Voxels.png" />
   </p>
-<figcaption>Distance to Ground</figcaption>
+<figcaption>Fig. 25 Distance to Ground</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1PVmR0BFf2cq39tiwaLSTBNVs9zbdrE2Z/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 26 Distance to ground flowchart</p>
 <h3 id="distance-to-the-ground">Distance to the ground</h3>
 <blockquote>
 <p>This analysis works in a similar way as the distance to the main entrance. This time every voxel calculates the distance between itself and the ground floor. To compute this field only one neighbourhood stencil is needed, because only the vertical movement is incorporated. The distance to the ground field is created to be able to specify how close a certain space wants to be to ground level. The result is a distance to the ground field in which 1 is the closest to ground level and 0 the furthest.</p>
@@ -945,10 +945,10 @@
 <figure>
 <p><img alt="Distance to Ground" src="../../img/Ground.png" />
   </p>
-<figcaption>Distance to the Ground</figcaption>
+<figcaption>Fig. 27 Distance to the Ground</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1gn6IroC8c-d6_po1XDo_2UbU96fRxZtC/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 28 Distance to ground flowchart</p>
 <h3 id="noise">Noise</h3>
 <blockquote>
 <p>Noise is another incorporated perspective, because one of the design principles is to create a good living condition. Reduce noise pollution is one of the aspects of a good living condition. Noise is estimated by looking at the busiest roads surrounding the building site. Noise pollution gets reduced once you get further away from the sound source. So this analysis is calculated by means of the distance between a certain point and a voxel and loudness of each noise source. The result is a noise field in which 1 means the least noise and 0 the most. </p>
@@ -956,10 +956,10 @@
 <figure>
 <p><img alt="Noise" src="../../img/Noise.png" />
   </p>
-<figcaption>Noise</figcaption>
+<figcaption>Fig. 29 Noise</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1NRZ9Z5tXbs4ADDTYxr4RI11CbMjtcA_D/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 30 Distance to ground flowchart</p>
 <h3 id="sun-access">Sun access</h3>
 <blockquote>
 <p>Sun access is a perspective which is also related to the design principle of creating a good living condition. Getting enough sun also belongs to a good living condition. For this analysis we had to take the annual path of the sun. From the points of this path the sun shoots rays of light that hit the voxels. The more hits, the higher the sun accessibility. The result is a sun access field in which 1 means the most sun and 0 the least.</p>
@@ -967,10 +967,10 @@
 <figure>
 <p><img alt="Sun accessibility" src="../../img/Sun%20acc.png" />
   </p>
-<figcaption>Sun accessibility</figcaption>
+<figcaption>Fig. 31 Sun accessibility</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1e9Nnasi6UWlAjaMEyjvSYO0lpBppy42j/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 32 Distance to ground flowchart</p>
 <h3 id="shadow-casting">Shadow casting</h3>
 <blockquote>
 <p>Calculating the shadows is an addition to the previous analysis. Sun rays are computed in an inverted direction to see where they hit the context. When there is a hit, this means the envelope will cast shadow on the surrounding. The result is a solar envelope in which we the parts which block the most sun are cut away. After the agent growth we can check is the building will not cast too much shadow by comparing the configuration with the solar envelope.</p>
@@ -978,10 +978,10 @@
 <figure>
 <p><img alt="Shadow cast" src="../../img/Shadow_cast_sun.png" />
   </p>
-<figcaption>Shadow casting</figcaption>
+<figcaption>Fig. 33 Shadow casting</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1WVEsNCrHBYL3iiHQKMFTeT-8O9Aa02hy/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 34 Distance to ground flowchart</p>
 <h3 id="sky-view-factor">Sky view factor</h3>
 <blockquote>
 <p>The amount of light which gets into a room has to do with the sun access, but also with the sky view. The more sky is visible, the more light will get into a room. In the sky view analysis we calculated the amount of a sky a voxel can see without being blocked by surrounded structures. The result is a sky view field in which 1 means the biggest sky view fact and 0 the smallest.</p>
@@ -989,10 +989,10 @@
 <figure>
 <p><img alt="SVF" src="../../img/Sky.png" />
   </p>
-<figcaption>Sky view factor</figcaption>
+<figcaption>Fig. 35 Sky view factor</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1IY74tjCA-i6ky7r4eXDwXXKygF8T0DDt/preview" width="900px" height="300px"></iframe>
-
+<p>Fig. 36 Distance to ground flowchart</p>
 <h3 id="view-on-greenery">View on greenery</h3>
 <blockquote>
 <p>The last aspect of a good living condition was a good view on greenery, therefore we created a view on greenery field. This analysis was acquired by looking into the database of tree points made by the city council of Rotterdam (Stadsbeheer Rotterdam, 2016). These points were clustered and they shot rays at the voxels. The more hits, means the higher the value for view on greenery. The result only includes the current greenery in the surrounding, in which 1 means the most view on greenery and 0 the least. However, to improve this analysis in future projects, the greenery, which will eventually be included in the plot, also needs to be taken into account. </p>
@@ -1000,9 +1000,10 @@
 <figure>
 <p><img alt="Greenery" src="../../img/greenery.png" />
   </p>
-<figcaption>View on greenery</figcaption>
+<figcaption>Fig. 37 View on greenery</figcaption>
 </figure>
 <iframe src="https://drive.google.com/file/d/1D3iLna_RNr_O45sSzfyKWXijImskLGda/preview" width="900px" height="300px"></iframe>
+<p>Fig. 38 Distance to ground flowchart</p>
                 
               
               
