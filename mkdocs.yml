@@ -1,23 +1,51 @@
-site_name: Spatial Computing Project Template
+site_name: Spatial Computing Project "8bit hub"
 
 nav:
   - Home: "index.md"
-  - Planning: "a1_planning.md"
-  - Configuring: "a2_configuring.md"
-  - Massing: "a3_massing.md"
-  - Forming: "a4_forming.md"
+  - Planning:
+      - Process: "Planning/a1_planning_process.md"
+      - Product: "Planning/a1_planning_product.md"
+  - Configuring:
+      - Process: "Configuring/a2_configuring_process.md"
+      - Product: "Configuring/a2_configuring_product.md"
+  - Massing: 
+        - Process: "Massing/a3_massing_process.md"
+        - Product: "Massing/a3_massing_product.md"
+  - Forming: 
+        - Process: "Forming/a4_forming_process.md"
+        - Product: "Forming/a4_forming_product.md"
   - About: "about.md"
-  - Index:
-      - Scripts: "index/scripts.md"
-      - Figures: "index/figures.md"
-      - Presentations: "index/presentations.md"
-      - Bibliography: "index/bibliography.md"
-  - Documenting (TBR):
-      - Instructions: "documenting/instructions.md"
-      - Folder Structure: "documenting/folder_structure.md"
-      - Guidelines: "documenting/guidelines.md"
+  - Final Deliveries:
+      - Reflection: "Final_Deliveries/reflection.md"
+      - Poster: "Final_Deliveries/poster.md"
+      - Notebooks: "Final_Deliveries/notebooks.md"
+      - Scripts:
+        - Distance: "Scripts/distance_entrance.md"
+        - Dynamic: "Scripts/dynamic_fields.md"
+        - Floor distance: "Scripts/distance_floor.md"
+        - Green: "Scripts/green_view.md"
+        - Noise: "Scripts/noise.md"
+        - Shadow: "Scripts/shadow.md"
+        - SVF: "Scripts/svf.md"
+        - Sun: "Scripts/sun_acc.md"
+        - Functions: "Scripts/functions.md"
+        - Initialise and ABM: "Scripts/grow_agents.md"
+        - Shafts: "Scripts/shafts_corridors.md"
+        - Voxelization: "Scripts/voxelization.md"
+      - Figures: "Final_Deliveries/figures.md"
+      - Presentations: "Final_Deliveries/presentations.md"
+      - Bibliography: "Final_Deliveries/bibliography.md"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SarahEdelaar/spatial_computing_project_template
 
 theme:
+  logo: img/logo.png
+  palette:
+    primary: light blue
+    accents: blue
   name: "material"
 
 markdown_extensions:
@@ -25,3 +53,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.highlight
   - pymdownx.emoji
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
